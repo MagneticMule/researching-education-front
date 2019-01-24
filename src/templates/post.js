@@ -36,10 +36,10 @@ class PostTemplate extends Component {
                 class="post__header-author-bio"
                 dangerouslySetInnerHTML={{ __html: post.author.description }}
               />
-              <img
+              {/* <img
                 class="post__header-author-picture"
                 src={post.author.avatar_urls.wordpress_48}
-              />
+              /> */}
             </div>
           </div>
           <div
