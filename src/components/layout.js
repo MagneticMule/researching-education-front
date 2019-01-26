@@ -1,9 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
-
-import Header from './header'
-import './layout.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import Head from './head';
+import MainMenu from './menu/mainMenu';
+import Header from './header';
+import Footer from './footer';
+import './layout.css';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -19,6 +21,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <Head />
         <Header
           siteTitle={data.site.siteMetadata.title}
           siteSubtitle={data.site.siteMetadata.subTitle}
@@ -31,26 +34,17 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
+          <MainMenu />
           {children}
         </div>
-        <footer class="footer">
-          <div class="footer_site-links" />
-
-          <div class="footer__credits">
-            <span class="footer__copyright">
-              © {new Date().getFullYear()}, Researching Education
-              {` `}
-            </span>
-            Created by <a href="magneticmule.com">The Magnetic Mule Co.</a>
-          </div>
-        </footer>
+        <Footer />
       </>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

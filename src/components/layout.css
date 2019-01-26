@@ -715,12 +715,21 @@ pre tt:after {
   color: lightgray;
   min-height: 300px;
   background: rgb(134, 30, 30);
+  position: relative;
+}
+
+.footer-container {
+  margin: 0 auto 0 auto;
+  max-width: 960px;
 }
 
 .footer__credits {
   font-family: Roboto, sans-serif;
   background: rgba(0, 0, 0, 0.2);
+  width: 100%;
   padding: 10px 0 10px 0;
+  position: absolute;
+  bottom: 0;
 }
 
 .footer__credits-copyright {
