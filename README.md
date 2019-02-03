@@ -6,6 +6,6 @@
 
 Researching Education is a newsletter written exclusively for teachers and educational researchers in the higher education sector.
 
-## 💫 Deploy
+## 💫 Status
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/MagneticMule/researhing-education-front)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b83cac7-3b3c-492a-9116-cb0d4164ac75/deploy-status)](https://app.netlify.com/sites/distracted-spence-732014/deploys)
