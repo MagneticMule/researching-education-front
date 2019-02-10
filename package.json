@@ -19,7 +19,8 @@
     "react": "^16.6.3",
     "react-disqus": "^1.0.2",
     "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-share": "^2.4.0"
   },
   "keywords": [
     "gatsby"
