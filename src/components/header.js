@@ -10,7 +10,7 @@ const Header = ({ siteTitle, siteSubtitle }) => (
       marginTop: '1.45rem',
     }}
   >
-    <div class="container">
+    <div className="container">
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"

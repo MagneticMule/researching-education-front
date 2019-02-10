@@ -26,7 +26,7 @@ const Layout = ({ children }) => (
           siteTitle={data.site.siteMetadata.title}
           siteSubtitle={data.site.siteMetadata.subTitle}
         />
-        <div class="container">
+        <div className="container">
           <MainMenu />
           {children}
         </div>

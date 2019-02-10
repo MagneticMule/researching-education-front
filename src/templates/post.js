@@ -1,19 +1,19 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import Disqus from 'disqus-react'
-import Layout from '../components/layout'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Disqus from 'disqus-react';
+import Layout from '../components/layout';
 // import PostIcons from "../components/PostIcons"
 
 // import { rhythm } from "../utils/typography"
 
 class PostTemplate extends Component {
   render() {
-    const post = this.props.data.wordpressPost
-    const disqusShortname = 'researching-education'
+    const post = this.props.data.wordpressPost;
+    const disqusShortname = 'researching-education';
     const disqusConfig = {
       identifier: post.title,
       title: post.title,
-    }
+    };
     return (
       <Layout>
         <div class="post">
@@ -26,22 +26,26 @@ class PostTemplate extends Component {
               class="post__header-title"
               dangerouslySetInnerHTML={{ __html: post.title }}
             />
-            <div class="post__header-author">
-              <span class="post__content--italic">by</span>&nbsp;
-              <span
-                class="post__header-author-name"
-                dangerouslySetInnerHTML={{ __html: post.author.name }}
-              />
-              <div
-                class="post__header-author-bio"
-                dangerouslySetInnerHTML={{ __html: post.author.description }}
-              />
-              {/* <img
-                class="post__header-author-picture"
-                src={post.author.avatar_urls.wordpress_48}
-              /> */}
-            </div>
           </div>
+          <div class="post__sharing">
+            <div class="post__sharing--header">Share</div>
+          </div>
+          <div class="post__author">
+            <span class="post__content--italic">by</span>&nbsp;
+            <span
+              class="post__author-name"
+              dangerouslySetInnerHTML={{ __html: post.author.name }}
+            />
+            <div
+              class="post__author-bio"
+              dangerouslySetInnerHTML={{ __html: post.author.description }}
+            />
+            <img
+              class="post__author-picture"
+              src={post.author.avatar_urls.wordpress_48}
+            />
+          </div>
+
           <div
             class="post__content"
             dangerouslySetInnerHTML={{ __html: post.content }}
@@ -54,7 +58,7 @@ class PostTemplate extends Component {
           />
         </div>
       </Layout>
-    )
+    );
   }
 }
 //<img src={post.image.sizes.thumbnail} />
@@ -62,9 +66,9 @@ class PostTemplate extends Component {
 PostTemplate.propTypes = {
   data: PropTypes.object.isRequired,
   edges: PropTypes.array,
-}
+};
 
-export default PostTemplate
+export default PostTemplate;
 
 export const postQuery = graphql`
   query currentPostQuery($id: String!) {
@@ -81,4 +85,4 @@ export const postQuery = graphql`
       date(formatString: "DD, MMM, YYYY")
     }
   }
-`
+`;
