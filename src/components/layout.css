@@ -640,6 +640,12 @@ pre tt:after {
     font-size: 100%;
   }
 }
+.border-small-dark {
+  border: 1px solid #343434;
+}
+.box-shadow-small {
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+}
 
 .container {
   margin: 0 auto;
@@ -745,16 +751,64 @@ pre tt:after {
 }
 
 .footer {
+  font-family: Roboto, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', -apple-system, sans-serif;
+  padding: 0;
+  margin: 0;
   position: relative;
-  min-height: 300px;
+  min-height: 400px;
   color: lightgray;
   background: rgb(134, 30, 30);
   font-size: 0.8rem;
 }
 
+.footer__section {
+}
+
+.footer__header {
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.footer__seperator {
+  border-top: 1px solid white;
+}
+
 .footer-container {
-  max-width: 960px;
-  margin: 0 auto 0 auto;
+}
+
+.footer__main {
+  margin: 0 auto;
+  min-height: 300px;
+  display: grid;
+  grid-gap: 20px;
+  padding-top: 40px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footer__signup-form {
+  width: 100%;
+}
+
+.footer__signup-form--submit-btn {
+  outline: none;
+  text-transform: uppercase;
+  color: beige;
+  height: 40px;
+  width: 30%;
+  background: #ff0303;
+  border: none;
+}
+
+.footer__signup-form--email-input {
+  outline: none;
+  padding: 10px 12px 10px 12px;
+  width: 70%;
+  height: 40px;
+  border: none;
+  height: 40px;
 }
 
 .footer__credits {
