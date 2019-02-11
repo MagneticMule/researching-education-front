@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
           siteSubtitle={data.site.siteMetadata.subTitle}
         />
         <div className="container">
-          <MainMenu /> {children}{' '}
+           {children}
         </div>
         <Footer />
       </div>

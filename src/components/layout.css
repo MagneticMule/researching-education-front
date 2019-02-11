@@ -691,13 +691,14 @@ pre tt:after {
   width: 160px;
   grid-area: issue;
   display: flex;
+  justify-content: baseline;
   flex-direction: column;
   align-content: center;
   align-items: center;
 }
 
 .issue__title {
-  font-size: 1.1rem;
+  font-size: 0.933rem;
   margin-bottom: 0.1rem;
   text-transform: uppercase;
 }
@@ -705,12 +706,12 @@ pre tt:after {
   display: inline-block;
   color: darkred;
   font-weight: 900;
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   letter-spacing: -0.1em;
 }
 .issue__date {
-  font-size: 1.56rem;
-  letter-spacing: -0.1em;
+  font-size: 1.16rem;
+  letter-spacing: -0.03em;
 }
 
 .post__sharing {
@@ -753,7 +754,9 @@ pre tt:after {
   grid-area: author;
 }
 .post__author-name {
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .post__author-bio {
@@ -763,11 +766,12 @@ pre tt:after {
 }
 
 .post__author-picture {
+  vertical-align: middle;
   filter: grayscale(1);
-  margin: 0 0 1.6em 0;
+  margin: 0 0 1rem 0;
   border-radius: 2%;
-  width: 100%;
-  border-bottom: 1px solid darkgrey;
+  width: 75%;
+  border: 1px solid darkgray;
 }
 
 .post__original-article {
@@ -814,6 +818,7 @@ pre tt:after {
 }
 
 .post__content--italic {
+  font-size: 0.9rem;
   padding-bottom: 0.3rem;
   border-bottom: 1px solid grey;
   font-weight: 100;
@@ -864,7 +869,7 @@ pre tt:after {
 
 .has-drop-cap::first-letter {
   font-weight: 900;
-  padding: 28px 10px 24px 4px;
+  padding: 26px 18px 24px 4px;
   font-size: 128px;
   float: left;
   text-align: center;
