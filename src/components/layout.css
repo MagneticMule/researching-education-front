@@ -647,7 +647,7 @@ pre tt:after {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 180px auto;
   max-width: 1280px;
   padding: 0 80px 0 80px;
 }
@@ -655,22 +655,23 @@ pre tt:after {
 /* menus */
 
 .menu {
-  margin: 0;
-  padding: 10px 0 10px 0;
+  align-content: flex-end;
 }
 
 .menu__item {
-  margin: 0 10px 0 0;
-  color: blue;
+  margin: 0 6px 0 6px;
+  padding: 10px 8px 10px 8px;
+  color: #332222;
   text-decoration: none;
+  text-transform: uppercase;
   font-family: Roboto, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell;
-  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  font-size: 0.9rem;
 }
 
 .menu__item:hover {
   color: red;
   border-bottom: 1px solid red;
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 /* post layout */
@@ -854,9 +855,20 @@ pre tt:after {
 .footer__credits-copyright {
 }
 
+/* wordpress classes */
+
 .wp-block-image {
-  background: white;
-  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 64px;
+}
+
+.wp-image-180,
+.wp-image-181,
+.wp-image-182,
+.wp-image-183,
+.wp-image-184 {
+  border-radius: 3px;
 }
 
 /* utilities */
@@ -869,9 +881,33 @@ pre tt:after {
 
 .has-drop-cap::first-letter {
   font-weight: 900;
-  padding: 26px 18px 24px 4px;
+  padding: 0 24px 0 0;
   font-size: 128px;
   float: left;
   text-align: center;
-  margin-top: 0.15em;
+  margin-top: 0.09em;
+}
+
+.site-mast {
+  background: white;
+  height: 120px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  z-index: 3;
+}
+
+.header {
+  padding: 30px 80px 30px 80px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-direction: row;
+  max-width: 1280px;
+  margin: 0 auto;
 }

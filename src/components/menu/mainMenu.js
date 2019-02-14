@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 class MainMenu extends Component {
   render() {
     return (
-      <div class="menu">
+      <nav class="menu">
         <Link to="/articles" className="menu__item">
           Articles
         </Link>
@@ -17,7 +17,7 @@ class MainMenu extends Component {
         <Link to="/about" className="menu__item">
           About
         </Link>
-      </div>
+      </nav>
     );
   }
 }
