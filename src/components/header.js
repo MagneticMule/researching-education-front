@@ -1,25 +1,21 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import MainMenu from './menu/mainMenu';
 
 const Header = ({ siteTitle, siteSubtitle }) => (
-  <div
-    style={{
-      background: `white`,
-      marginBottom: `2.45rem`,
-      marginTop: '1.45rem',
-    }}
-  >
-    <div class="container">
+  <div className="site-mast">
+    <div class="header">
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            fontFamily: 'EB Garamond',
+            fontFamily: 'Oswald',
+            textTransform: 'uppercase',
             fontStyle: 'normal',
-            fontWeight: '800',
+            fontWeight: '400',
             lineHeight: 'normal',
-            fontSize: '2.1rem',
+            fontSize: '2rem',
             letterSpacing: '-0.04em',
             color: `#861E1E`,
             textDecoration: `none`,
@@ -28,15 +24,7 @@ const Header = ({ siteTitle, siteSubtitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <div
-        style={{
-          margin: '10px 0',
-          fontFamily: 'EB Garamond',
-          fontSize: '.9rem',
-        }}
-      >
-        {siteSubtitle}
-      </div>
+      <MainMenu />
     </div>
   </div>
 );

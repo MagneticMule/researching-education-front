@@ -1,0 +1,1543 @@
+[1mdiff --git a/.csscomb.json b/.csscomb.json[m
+[1mindex af30f8f..633ccb6 100644[m
+[1m--- a/.csscomb.json[m
+[1m+++ b/.csscomb.json[m
+[36m@@ -1,315 +1,315 @@[m
+[31m-{[m
+[31m-  "exclude": ["node_modules/**", "vendor/**"],[m
+[31m-  "verbose": true,[m
+[31m-  "always-semicolon": true,[m
+[31m-  "color-case": "upper",[m
+[31m-  "block-indent": "  ",[m
+[31m-  "color-shorthand": false,[m
+[31m-  "element-case": "lower",[m
+[31m-  "eof-newline": true,[m
+[31m-  "leading-zero": false,[m
+[31m-  "quotes": "double",[m
+[31m-  "sort-order-fallback": "abc",[m
+[31m-  "space-before-colon": "",[m
+[31m-  "space-after-colon": " ",[m
+[31m-  "space-before-combinator": "",[m
+[31m-  "space-after-combinator": " ",[m
+[31m-  "space-between-declarations": "\n",[m
+[31m-  "space-before-opening-brace": " ",[m
+[31m-  "space-after-opening-brace": "\n",[m
+[31m-  "space-after-selector-delimiter": "\n",[m
+[31m-  "space-before-selector-delimiter": "",[m
+[31m-  "space-before-closing-brace": "\n",[m
+[31m-  "strip-spaces": true,[m
+[31m-  "tab-size": true,[m
+[31m-  "unitless-zero": true,[m
+[31m-  "vendor-prefix-align": true,[m
+[31m-  "sort-order": [[m
+[31m-    "$variable",[m
+[31m-    "$include",[m
+[31m-    "display",[m
+[31m-    "visibility",[m
+[31m-    "float",[m
+[31m-    "clear",[m
+[31m-    "overflow",[m
+[31m-    "overflow-x",[m
+[31m-    "overflow-y",[m
+[31m-    "-ms-overflow-x",[m
+[31m-    "-ms-overflow-y",[m
+[31m-    "clip",[m
+[31m-    "zoom",[m
+[31m-    "flex-direction",[m
+[31m-    "flex-order",[m
+[31m-    "flex-pack",[m
+[31m-    "flex-align",[m
+[31m-    "position",[m
+[31m-    "z-index",[m
+[31m-    "top",[m
+[31m-    "right",[m
+[31m-    "bottom",[m
+[31m-    "left",[m
+[31m-    "-webkit-box-sizing",[m
+[31m-    "-moz-box-sizing",[m
+[31m-    "box-sizing",[m
+[31m-    "width",[m
+[31m-    "min-width",[m
+[31m-    "max-width",[m
+[31m-    "height",[m
+[31m-    "min-height",[m
+[31m-    "max-height",[m
+[31m-    "margin",[m
+[31m-    "margin-top",[m
+[31m-    "margin-right",[m
+[31m-    "margin-bottom",[m
+[31m-    "margin-left",[m
+[31m-    "padding",[m
+[31m-    "padding-top",[m
+[31m-    "padding-right",[m
+[31m-    "padding-bottom",[m
+[31m-    "padding-left",[m
+[31m-    "border",[m
+[31m-    "border-width",[m
+[31m-    "border-style",[m
+[31m-    "border-color",[m
+[31m-    "border-top",[m
+[31m-    "border-top-width",[m
+[31m-    "border-top-style",[m
+[31m-    "border-top-color",[m
+[31m-    "border-right",[m
+[31m-    "border-right-width",[m
+[31m-    "border-right-style",[m
+[31m-    "border-right-color",[m
+[31m-    "border-bottom",[m
+[31m-    "border-bottom-width",[m
+[31m-    "border-bottom-style",[m
+[31m-    "border-bottom-color",[m
+[31m-    "border-left",[m
+[31m-    "border-left-width",[m
+[31m-    "border-left-style",[m
+[31m-    "border-left-color",[m
+[31m-    "-webkit-border-radius",[m
+[31m-    "-moz-border-radius",[m
+[31m-    "border-radius",[m
+[31m-    "-webkit-border-top-left-radius",[m
+[31m-    "-moz-border-radius-topleft",[m
+[31m-    "border-top-left-radius",[m
+[31m-    "-webkit-border-top-right-radius",[m
+[31m-    "-moz-border-radius-topright",[m
+[31m-    "border-top-right-radius",[m
+[31m-    "-webkit-border-bottom-right-radius",[m
+[31m-    "-moz-border-radius-bottomright",[m
+[31m-    "border-bottom-right-radius",[m
+[31m-    "-webkit-border-bottom-left-radius",[m
+[31m-    "-moz-border-radius-bottomleft",[m
+[31m-    "border-bottom-left-radius",[m
+[31m-    "-webkit-border-image",[m
+[31m-    "-moz-border-image",[m
+[31m-    "-o-border-image",[m
+[31m-    "border-image",[m
+[31m-    "-webkit-border-image-source",[m
+[31m-    "-moz-border-image-source",[m
+[31m-    "-o-border-image-source",[m
+[31m-    "border-image-source",[m
+[31m-    "-webkit-border-image-slice",[m
+[31m-    "-moz-border-image-slice",[m
+[31m-    "-o-border-image-slice",[m
+[31m-    "border-image-slice",[m
+[31m-    "-webkit-border-image-width",[m
+[31m-    "-moz-border-image-width",[m
+[31m-    "-o-border-image-width",[m
+[31m-    "border-image-width",[m
+[31m-    "-webkit-border-image-outset",[m
+[31m-    "-moz-border-image-outset",[m
+[31m-    "-o-border-image-outset",[m
+[31m-    "border-image-outset",[m
+[31m-    "-webkit-border-image-repeat",[m
+[31m-    "-moz-border-image-repeat",[m
+[31m-    "-o-border-image-repeat",[m
+[31m-    "border-image-repeat",[m
+[31m-    "table-layout",[m
+[31m-    "empty-cells",[m
+[31m-    "caption-side",[m
+[31m-    "border-spacing",[m
+[31m-    "border-collapse",[m
+[31m-    "outline",[m
+[31m-    "outline-width",[m
+[31m-    "outline-style",[m
+[31m-    "outline-color",[m
+[31m-    "outline-offset",[m
+[31m-    "opacity",[m
+[31m-    "filter:progid:DXImageTransform.Microsoft.Alpha(Opacity",[m
+[31m-    "-ms-filter:\\'progid:DXImageTransform.Microsoft.Alpha",[m
+[31m-    "-ms-interpolation-mode",[m
+[31m-    "color",[m
+[31m-    "background",[m
+[31m-    "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader",[m
+[31m-    "background-color",[m
+[31m-    "background-image",[m
+[31m-    "background-repeat",[m
+[31m-    "background-attachment",[m
+[31m-    "background-position",[m
+[31m-    "background-position-x",[m
+[31m-    "-ms-background-position-x",[m
+[31m-    "background-position-y",[m
+[31m-    "-ms-background-position-y",[m
+[31m-    "-webkit-background-clip",[m
+[31m-    "-moz-background-clip",[m
+[31m-    "background-clip",[m
+[31m-    "background-origin",[m
+[31m-    "-webkit-background-size",[m
+[31m-    "-moz-background-size",[m
+[31m-    "-o-background-size",[m
+[31m-    "background-size",[m
+[31m-    "box-decoration-break",[m
+[31m-    "-webkit-box-shadow",[m
+[31m-    "-moz-box-shadow",[m
+[31m-    "box-shadow",[m
+[31m-    "filter:progid:DXImageTransform.Microsoft.gradient",[m
+[31m-    "-ms-filter:\\'progid:DXImageTransform.Microsoft.gradient",[m
+[31m-    "text-shadow",[m
+[31m-    "font",[m
+[31m-    "font-family",[m
+[31m-    "font-size",[m
+[31m-    "font-weight",[m
+[31m-    "font-style",[m
+[31m-    "font-variant",[m
+[31m-    "font-size-adjust",[m
+[31m-    "font-stretch",[m
+[31m-    "font-effect",[m
+[31m-    "font-emphasize",[m
+[31m-    "font-emphasize-position",[m
+[31m-    "font-emphasize-style",[m
+[31m-    "font-smooth",[m
+[31m-    "line-height",[m
+[31m-    "text-align",[m
+[31m-    "-webkit-text-align-last",[m
+[31m-    "-moz-text-align-last",[m
+[31m-    "-ms-text-align-last",[m
+[31m-    "text-align-last",[m
+[31m-    "vertical-align",[m
+[31m-    "white-space",[m
+[31m-    "text-decoration",[m
+[31m-    "text-emphasis",[m
+[31m-    "text-emphasis-color",[m
+[31m-    "text-emphasis-style",[m
+[31m-    "text-emphasis-position",[m
+[31m-    "text-indent",[m
+[31m-    "-ms-text-justify",[m
+[31m-    "text-justify",[m
+[31m-    "letter-spacing",[m
+[31m-    "word-spacing",[m
+[31m-    "-ms-writing-mode",[m
+[31m-    "text-outline",[m
+[31m-    "text-transform",[m
+[31m-    "text-wrap",[m
+[31m-    "text-overflow",[m
+[31m-    "-ms-text-overflow",[m
+[31m-    "text-overflow-ellipsis",[m
+[31m-    "text-overflow-mode",[m
+[31m-    "-ms-word-wrap",[m
+[31m-    "word-wrap",[m
+[31m-    "word-break",[m
+[31m-    "-ms-word-break",[m
+[31m-    "-moz-tab-size",[m
+[31m-    "-o-tab-size",[m
+[31m-    "tab-size",[m
+[31m-    "-webkit-hyphens",[m
+[31m-    "-moz-hyphens",[m
+[31m-    "hyphens",[m
+[31m-    "list-style",[m
+[31m-    "list-style-position",[m
+[31m-    "list-style-type",[m
+[31m-    "list-style-image",[m
+[31m-    "content",[m
+[31m-    "quotes",[m
+[31m-    "counter-reset",[m
+[31m-    "counter-increment",[m
+[31m-    "resize",[m
+[31m-    "cursor",[m
+[31m-    "-webkit-user-select",[m
+[31m-    "-moz-user-select",[m
+[31m-    "-ms-user-select",[m
+[31m-    "user-select",[m
+[31m-    "nav-index",[m
+[31m-    "nav-up",[m
+[31m-    "nav-right",[m
+[31m-    "nav-down",[m
+[31m-    "nav-left",[m
+[31m-    "-webkit-transition",[m
+[31m-    "-moz-transition",[m
+[31m-    "-ms-transition",[m
+[31m-    "-o-transition",[m
+[31m-    "transition",[m
+[31m-    "-webkit-transition-delay",[m
+[31m-    "-moz-transition-delay",[m
+[31m-    "-ms-transition-delay",[m
+[31m-    "-o-transition-delay",[m
+[31m-    "transition-delay",[m
+[31m-    "-webkit-transition-timing-function",[m
+[31m-    "-moz-transition-timing-function",[m
+[31m-    "-ms-transition-timing-function",[m
+[31m-    "-o-transition-timing-function",[m
+[31m-    "transition-timing-function",[m
+[31m-    "-webkit-transition-duration",[m
+[31m-    "-moz-transition-duration",[m
+[31m-    "-ms-transition-duration",[m
+[31m-    "-o-transition-duration",[m
+[31m-    "transition-duration",[m
+[31m-    "-webkit-transition-property",[m
+[31m-    "-moz-transition-property",[m
+[31m-    "-ms-transition-property",[m
+[31m-    "-o-transition-property",[m
+[31m-    "transition-property",[m
+[31m-    "-webkit-transform",[m
+[31m-    "-moz-transform",[m
+[31m-    "-ms-transform",[m
+[31m-    "-o-transform",[m
+[31m-    "transform",[m
+[31m-    "-webkit-transform-origin",[m
+[31m-    "-moz-transform-origin",[m
+[31m-    "-ms-transform-origin",[m
+[31m-    "-o-transform-origin",[m
+[31m-    "transform-origin",[m
+[31m-    "-webkit-animation",[m
+[31m-    "-moz-animation",[m
+[31m-    "-ms-animation",[m
+[31m-    "-o-animation",[m
+[31m-    "animation",[m
+[31m-    "-webkit-animation-name",[m
+[31m-    "-moz-animation-name",[m
+[31m-    "-ms-animation-name",[m
+[31m-    "-o-animation-name",[m
+[31m-    "animation-name",[m
+[31m-    "-webkit-animation-duration",[m
+[31m-    "-moz-animation-duration",[m
+[31m-    "-ms-animation-duration",[m
+[31m-    "-o-animation-duration",[m
+[31m-    "animation-duration",[m
+[31m-    "-webkit-animation-play-state",[m
+[31m-    "-moz-animation-play-state",[m
+[31m-    "-ms-animation-play-state",[m
+[31m-    "-o-animation-play-state",[m
+[31m-    "animation-play-state",[m
+[31m-    "-webkit-animation-timing-function",[m
+[31m-    "-moz-animation-timing-function",[m
+[31m-    "-ms-animation-timing-function",[m
+[31m-    "-o-animation-timing-function",[m
+[31m-    "animation-timing-function",[m
+[31m-    "-webkit-animation-delay",[m
+[31m-    "-moz-animation-delay",[m
+[31m-    "-ms-animation-delay",[m
+[31m-    "-o-animation-delay",[m
+[31m-    "animation-delay",[m
+[31m-    "-webkit-animation-iteration-count",[m
+[31m-    "-moz-animation-iteration-count",[m
+[31m-    "-ms-animation-iteration-count",[m
+[31m-    "-o-animation-iteration-count",[m
+[31m-    "animation-iteration-count",[m
+[31m-    "-webkit-animation-direction",[m
+[31m-    "-moz-animation-direction",[m
+[31m-    "-ms-animation-direction",[m
+[31m-    "-o-animation-direction",[m
+[31m-    "animation-direction",[m
+[31m-    "pointer-events"[m
+[31m-  ][m
+[31m-}[m
+[32m+[m[32m{[m[41m[m
+[32m+[m[32m  "exclude": ["node_modules/**", "vendor/**"],[m[41m[m
+[32m+[m[32m  "verbose": true,[m[41m[m
+[32m+[m[32m  "always-semicolon": true,[m[41m[m
+[32m+[m[32m  "color-case": "upper",[m[41m[m
+[32m+[m[32m  "block-indent": "  ",[m[41m[m
+[32m+[m[32m  "color-shorthand": false,[m[41m[m
+[32m+[m[32m  "element-case": "lower",[m[41m[m
+[32m+[m[32m  "eof-newline": true,[m[41m[m
+[32m+[m[32m  "leading-zero": false,[m[41m[m
+[32m+[m[32m  "quotes": "double",[m[41m[m
+[32m+[m[32m  "sort-order-fallback": "abc",[m[41m[m
+[32m+[m[32m  "space-before-colon": "",[m[41m[m
+[32m+[m[32m  "space-after-colon": " ",[m[41m[m
+[32m+[m[32m  "space-before-combinator": "",[m[41m[m
+[32m+[m[32m  "space-after-combinator": " ",[m[41m[m
+[32m+[m[32m  "space-between-declarations": "\n",[m[41m[m
+[32m+[m[32m  "space-before-opening-brace": " ",[m[41m[m
+[32m+[m[32m  "space-after-opening-brace": "\n",[m[41m[m
+[32m+[m[32m  "space-after-selector-delimiter": "\n",[m[41m[m
+[32m+[m[32m  "space-before-selector-delimiter": "",[m[41m[m
+[32m+[m[32m  "space-before-closing-brace": "\n",[m[41m[m
+[32m+[m[32m  "strip-spaces": true,[m[41m[m
+[32m+[m[32m  "tab-size": true,[m[41m[m
+[32m+[m[32m  "unitless-zero": true,[m[41m[m
+[32m+[m[32m  "vendor-prefix-align": true,[m[41m[m
+[32m+[m[32m  "sort-order": [[m[41m[m
+[32m+[m[32m    "$variable",[m[41m[m
+[32m+[m[32m    "$include",[m[41m[m
+[32m+[m[32m    "display",[m[41m[m
+[32m+[m[32m    "visibility",[m[41m[m
+[32m+[m[32m    "float",[m[41m[m
+[32m+[m[32m    "clear",[m[41m[m
+[32m+[m[32m    "overflow",[m[41m[m
+[32m+[m[32m    "overflow-x",[m[41m[m
+[32m+[m[32m    "overflow-y",[m[41m[m
+[32m+[m[32m    "-ms-overflow-x",[m[41m[m
+[32m+[m[32m    "-ms-overflow-y",[m[41m[m
+[32m+[m[32m    "clip",[m[41m[m
+[32m+[m[32m    "zoom",[m[41m[m
+[32m+[m[32m    "flex-direction",[m[41m[m
+[32m+[m[32m    "flex-order",[m[41m[m
+[32m+[m[32m    "flex-pack",[m[41m[m
+[32m+[m[32m    "flex-align",[m[41m[m
+[32m+[m[32m    "position",[m[41m[m
+[32m+[m[32m    "z-index",[m[41m[m
+[32m+[m[32m    "top",[m[41m[m
+[32m+[m[32m    "right",[m[41m[m
+[32m+[m[32m    "bottom",[m[41m[m
+[32m+[m[32m    "left",[m[41m[m
+[32m+[m[32m    "-webkit-box-sizing",[m[41m[m
+[32m+[m[32m    "-moz-box-sizing",[m[41m[m
+[32m+[m[32m    "box-sizing",[m[41m[m
+[32m+[m[32m    "width",[m[41m[m
+[32m+[m[32m    "min-width",[m[41m[m
+[32m+[m[32m    "max-width",[m[41m[m
+[32m+[m[32m    "height",[m[41m[m
+[32m+[m[32m    "min-height",[m[41m[m
+[32m+[m[32m    "max-height",[m[41m[m
+[32m+[m[32m    "margin",[m[41m[m
+[32m+[m[32m    "margin-top",[m[41m[m
+[32m+[m[32m    "margin-right",[m[41m[m
+[32m+[m[32m    "margin-bottom",[m[41m[m
+[32m+[m[32m    "margin-left",[m[41m[m
+[32m+[m[32m    "padding",[m[41m[m
+[32m+[m[32m    "padding-top",[m[41m[m
+[32m+[m[32m    "padding-right",[m[41m[m
+[32m+[m[32m    "padding-bottom",[m[41m[m
+[32m+[m[32m    "padding-left",[m[41m[m
+[32m+[m[32m    "border",[m[41m[m
+[32m+[m[32m    "border-width",[m[41m[m
+[32m+[m[32m    "border-style",[m[41m[m
+[32m+[m[32m    "border-color",[m[41m[m
+[32m+[m[32m    "border-top",[m[41m[m
+[32m+[m[32m    "border-top-width",[m[41m[m
+[32m+[m[32m    "border-top-style",[m[41m[m
+[32m+[m[32m    "border-top-color",[m[41m[m
+[32m+[m[32m    "border-right",[m[41m[m
+[32m+[m[32m    "border-right-width",[m[41m[m
+[32m+[m[32m    "border-right-style",[m[41m[m
+[32m+[m[32m    "border-right-color",[m[41m[m
+[32m+[m[32m    "border-bottom",[m[41m[m
+[32m+[m[32m    "border-bottom-width",[m[41m[m
+[32m+[m[32m    "border-bottom-style",[m[41m[m
+[32m+[m[32m    "border-bottom-color",[m[41m[m
+[32m+[m[32m    "border-left",[m[41m[m
+[32m+[m[32m    "border-left-width",[m[41m[m
+[32m+[m[32m    "border-left-style",[m[41m[m
+[32m+[m[32m    "border-left-color",[m[41m[m
+[32m+[m[32m    "-webkit-border-radius",[m[41m[m
+[32m+[m[32m    "-moz-border-radius",[m[41m[m
+[32m+[m[32m    "border-radius",[m[41m[m
+[32m+[m[32m    "-webkit-border-top-left-radius",[m[41m[m
+[32m+[m[32m    "-moz-border-radius-topleft",[m[41m[m
+[32m+[m[32m    "border-top-left-radius",[m[41m[m
+[32m+[m[32m    "-webkit-border-top-right-radius",[m[41m[m
+[32m+[m[32m    "-moz-border-radius-topright",[m[41m[m
+[32m+[m[32m    "border-top-right-radius",[m[41m[m
+[32m+[m[32m    "-webkit-border-bottom-right-radius",[m[41m[m
+[32m+[m[32m    "-moz-border-radius-bottomright",[m[41m[m
+[32m+[m[32m    "border-bottom-right-radius",[m[41m[m
+[32m+[m[32m    "-webkit-border-bottom-left-radius",[m[41m[m
+[32m+[m[32m    "-moz-border-radius-bottomleft",[m[41m[m
+[32m+[m[32m    "border-bottom-left-radius",[m[41m[m
+[32m+[m[32m    "-webkit-border-image",[m[41m[m
+[32m+[m[32m    "-moz-border-image",[m[41m[m
+[32m+[m[32m    "-o-border-image",[m[41m[m
+[32m+[m[32m    "border-image",[m[41m[m
+[32m+[m[32m    "-webkit-border-image-source",[m[41m[m
+[32m+[m[32m    "-moz-border-image-source",[m[41m[m
+[32m+[m[32m    "-o-border-image-source",[m[41m[m
+[32m+[m[32m    "border-image-source",[m[41m[m
+[32m+[m[32m    "-webkit-border-image-slice",[m[41m[m
+[32m+[m[32m    "-moz-border-image-slice",[m[41m[m
+[32m+[m[32m    "-o-border-image-slice",[m[41m[m
+[32m+[m[32m    "border-image-slice",[m[41m[m
+[32m+[m[32m    "-webkit-border-image-width",[m[41m[m
+[32m+[m[32m    "-moz-border-image-width",[m[41m[m
+[32m+[m[32m    "-o-border-image-width",[m[41m[m
+[32m+[m[32m    "border-image-width",[m[41m[m
+[32m+[m[32m    "-webkit-border-image-outset",[m[41m[m
+[32m+[m[32m    "-moz-border-image-outset",[m[41m[m
+[32m+[m[32m    "-o-border-image-outset",[m[41m[m
+[32m+[m[32m    "border-image-outset",[m[41m[m
+[32m+[m[32m    "-webkit-border-image-repeat",[m[41m[m
+[32m+[m[32m    "-moz-border-image-repeat",[m[41m[m
+[32m+[m[32m    "-o-border-image-repeat",[m[41m[m
+[32m+[m[32m    "border-image-repeat",[m[41m[m
+[32m+[m[32m    "table-layout",[m[41m[m
+[32m+[m[32m    "empty-cells",[m[41m[m
+[32m+[m[32m    "caption-side",[m[41m[m
+[32m+[m[32m    "border-spacing",[m[41m[m
+[32m+[m[32m    "border-collapse",[m[41m[m
+[32m+[m[32m    "outline",[m[41m[m
+[32m+[m[32m    "outline-width",[m[41m[m
+[32m+[m[32m    "outline-style",[m[41m[m
+[32m+[m[32m    "outline-color",[m[41m[m
+[32m+[m[32m    "outline-offset",[m[41m[m
+[32m+[m[32m    "opacity",[m[41m[m
+[32m+[m[32m    "filter:progid:DXImageTransform.Microsoft.Alpha(Opacity",[m[41m[m
+[32m+[m[32m    "-ms-filter:\\'progid:DXImageTransform.Microsoft.Alpha",[m[41m[m
+[32m+[m[32m    "-ms-interpolation-mode",[m[41m[m
+[32m+[m[32m    "color",[m[41m[m
+[32m+[m[32m    "background",[m[41m[m
+[32m+[m[32m    "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader",[m[41m[m
+[32m+[m[32m    "background-color",[m[41m[m
+[32m+[m[32m    "background-image",[m[41m[m
+[32m+[m[32m    "background-repeat",[m[41m[m
+[32m+[m[32m    "background-attachment",[m[41m[m
+[32m+[m[32m    "background-position",[m[41m[m
+[32m+[m[32m    "background-position-x",[m[41m[m
+[32m+[m[32m    "-ms-background-position-x",[m[41m[m
+[32m+[m[32m    "background-position-y",[m[41m[m
+[32m+[m[32m    "-ms-background-position-y",[m[41m[m
+[32m+[m[32m    "-webkit-background-clip",[m[41m[m
+[32m+[m[32m    "-moz-background-clip",[m[41m[m
+[32m+[m[32m    "background-clip",[m[41m[m
+[32m+[m[32m    "background-origin",[m[41m[m
+[32m+[m[32m    "-webkit-background-size",[m[41m[m
+[32m+[m[32m    "-moz-background-size",[m[41m[m
+[32m+[m[32m    "-o-background-size",[m[41m[m
+[32m+[m[32m    "background-size",[m[41m[m
+[32m+[m[32m    "box-decoration-break",[m[41m[m
+[32m+[m[32m    "-webkit-box-shadow",[m[41m[m
+[32m+[m[32m    "-moz-box-shadow",[m[41m[m
+[32m+[m[32m    "box-shadow",[m[41m[m
+[32m+[m[32m    "filter:progid:DXImageTransform.Microsoft.gradient",[m[41m[m
+[32m+[m[32m    "-ms-filter:\\'progid:DXImageTransform.Microsoft.gradient",[m[41m[m
+[32m+[m[32m    "text-shadow",[m[41m[m
+[32m+[m[32m    "font",[m[41m[m
+[32m+[m[32m    "font-family",[m[41m[m
+[32m+[m[32m    "font-size",[m[41m[m
+[32m+[m[32m    "font-weight",[m[41m[m
+[32m+[m[32m    "font-style",[m[41m[m
+[32m+[m[32m    "font-variant",[m[41m[m
+[32m+[m[32m    "font-size-adjust",[m[41m[m
+[32m+[m[32m    "font-stretch",[m[41m[m
+[32m+[m[32m    "font-effect",[m[41m[m
+[32m+[m[32m    "font-emphasize",[m[41m[m
+[32m+[m[32m    "font-emphasize-position",[m[41m[m
+[32m+[m[32m    "font-emphasize-style",[m[41m[m
+[32m+[m[32m    "font-smooth",[m[41m[m
+[32m+[m[32m    "line-height",[m[41m[m
+[32m+[m[32m    "text-align",[m[41m[m
+[32m+[m[32m    "-webkit-text-align-last",[m[41m[m
+[32m+[m[32m    "-moz-text-align-last",[m[41m[m
+[32m+[m[32m    "-ms-text-align-last",[m[41m[m
+[32m+[m[32m    "text-align-last",[m[41m[m
+[32m+[m[32m    "vertical-align",[m[41m[m
+[32m+[m[32m    "white-space",[m[41m[m
+[32m+[m[32m    "text-decoration",[m[41m[m
+[32m+[m[32m    "text-emphasis",[m[41m[m
+[32m+[m[32m    "text-emphasis-color",[m[41m[m
+[32m+[m[32m    "text-emphasis-style",[m[41m[m
+[32m+[m[32m    "text-emphasis-position",[m[41m[m
+[32m+[m[32m    "text-indent",[m[41m[m
+[32m+[m[32m    "-ms-text-justify",[m[41m[m
+[32m+[m[32m    "text-justify",[m[41m[m
+[32m+[m[32m    "letter-spacing",[m[41m[m
+[32m+[m[32m    "word-spacing",[m[41m[m
+[32m+[m[32m    "-ms-writing-mode",[m[41m[m
+[32m+[m[32m    "text-outline",[m[41m[m
+[32m+[m[32m    "text-transform",[m[41m[m
+[32m+[m[32m    "text-wrap",[m[41m[m
+[32m+[m[32m    "text-overflow",[m[41m[m
+[32m+[m[32m    "-ms-text-overflow",[m[41m[m
+[32m+[m[32m    "text-overflow-ellipsis",[m[41m[m
+[32m+[m[32m    "text-overflow-mode",[m[41m[m
+[32m+[m[32m    "-ms-word-wrap",[m[41m[m
+[32m+[m[32m    "word-wrap",[m[41m[m
+[32m+[m[32m    "word-break",[m[41m[m
+[32m+[m[32m    "-ms-word-break",[m[41m[m
+[32m+[m[32m    "-moz-tab-size",[m[41m[m
+[32m+[m[32m    "-o-tab-size",[m[41m[m
+[32m+[m[32m    "tab-size",[m[41m[m
+[32m+[m[32m    "-webkit-hyphens",[m[41m[m
+[32m+[m[32m    "-moz-hyphens",[m[41m[m
+[32m+[m[32m    "hyphens",[m[41m[m
+[32m+[m[32m    "list-style",[m[41m[m
+[32m+[m[32m    "list-style-position",[m[41m[m
+[32m+[m[32m    "list-style-type",[m[41m[m
+[32m+[m[32m    "list-style-image",[m[41m[m
+[32m+[m[32m    "content",[m[41m[m
+[32m+[m[32m    "quotes",[m[41m[m
+[32m+[m[32m    "counter-reset",[m[41m[m
+[32m+[m[32m    "counter-increment",[m[41m[m
+[32m+[m[32m    "resize",[m[41m[m
+[32m+[m[32m    "cursor",[m[41m[m
+[32m+[m[32m    "-webkit-user-select",[m[41m[m
+[32m+[m[32m    "-moz-user-select",[m[41m[m
+[32m+[m[32m    "-ms-user-select",[m[41m[m
+[32m+[m[32m    "user-select",[m[41m[m
+[32m+[m[32m    "nav-index",[m[41m[m
+[32m+[m[32m    "nav-up",[m[41m[m
+[32m+[m[32m    "nav-right",[m[41m[m
+[32m+[m[32m    "nav-down",[m[41m[m
+[32m+[m[32m    "nav-left",[m[41m[m
+[32m+[m[32m    "-webkit-transition",[m[41m[m
+[32m+[m[32m    "-moz-transition",[m[41m[m
+[32m+[m[32m    "-ms-transition",[m[41m[m
+[32m+[m[32m    "-o-transition",[m[41m[m
+[32m+[m[32m    "transition",[m[41m[m
+[32m+[m[32m    "-webkit-transition-delay",[m[41m[m
+[32m+[m[32m    "-moz-transition-delay",[m[41m[m
+[32m+[m[32m    "-ms-transition-delay",[m[41m[m
+[32m+[m[32m    "-o-transition-delay",[m[41m[m
+[32m+[m[32m    "transition-delay",[m[41m[m
+[32m+[m[32m    "-webkit-transition-timing-function",[m[41m[m
+[32m+[m[32m    "-moz-transition-timing-function",[m[41m[m
+[32m+[m[32m    "-ms-transition-timing-function",[m[41m[m
+[32m+[m[32m    "-o-transition-timing-function",[m[41m[m
+[32m+[m[32m    "transition-timing-function",[m[41m[m
+[32m+[m[32m    "-webkit-transition-duration",[m[41m[m
+[32m+[m[32m    "-moz-transition-duration",[m[41m[m
+[32m+[m[32m    "-ms-transition-duration",[m[41m[m
+[32m+[m[32m    "-o-transition-duration",[m[41m[m
+[32m+[m[32m    "transition-duration",[m[41m[m
+[32m+[m[32m    "-webkit-transition-property",[m[41m[m
+[32m+[m[32m    "-moz-transition-property",[m[41m[m
+[32m+[m[32m    "-ms-transition-property",[m[41m[m
+[32m+[m[32m    "-o-transition-property",[m[41m[m
+[32m+[m[32m    "transition-property",[m[41m[m
+[32m+[m[32m    "-webkit-transform",[m[41m[m
+[32m+[m[32m    "-moz-transform",[m[41m[m
+[32m+[m[32m    "-ms-transform",[m[41m[m
+[32m+[m[32m    "-o-transform",[m[41m[m
+[32m+[m[32m    "transform",[m[41m[m
+[32m+[m[32m    "-webkit-transform-origin",[m[41m[m
+[32m+[m[32m    "-moz-transform-origin",[m[41m[m
+[32m+[m[32m    "-ms-transform-origin",[m[41m[m
+[32m+[m[32m    "-o-transform-origin",[m[41m[m
+[32m+[m[32m    "transform-origin",[m[41m[m
+[32m+[m[32m    "-webkit-animation",[m[41m[m
+[32m+[m[32m    "-moz-animation",[m[41m[m
+[32m+[m[32m    "-ms-animation",[m[41m[m
+[32m+[m[32m    "-o-animation",[m[41m[m
+[32m+[m[32m    "animation",[m[41m[m
+[32m+[m[32m    "-webkit-animation-name",[m[41m[m
+[32m+[m[32m    "-moz-animation-name",[m[41m[m
+[32m+[m[32m    "-ms-animation-name",[m[41m[m
+[32m+[m[32m    "-o-animation-name",[m[41m[m
+[32m+[m[32m    "animation-name",[m[41m[m
+[32m+[m[32m    "-webkit-animation-duration",[m[41m[m
+[32m+[m[32m    "-moz-animation-duration",[m[41m[m
+[32m+[m[32m    "-ms-animation-duration",[m[41m[m
+[32m+[m[32m    "-o-animation-duration",[m[41m[m
+[32m+[m[32m    "animation-duration",[m[41m[m
+[32m+[m[32m    "-webkit-animation-play-state",[m[41m[m
+[32m+[m[32m    "-moz-animation-play-state",[m[41m[m
+[32m+[m[32m    "-ms-animation-play-state",[m[41m[m
+[32m+[m[32m    "-o-animation-play-state",[m[41m[m
+[32m+[m[32m    "animation-play-state",[m[41m[m
+[32m+[m[32m    "-webkit-animation-timing-function",[m[41m[m
+[32m+[m[32m    "-moz-animation-timing-function",[m[41m[m
+[32m+[m[32m    "-ms-animation-timing-function",[m[41m[m
+[32m+[m[32m    "-o-animation-timing-function",[m[41m[m
+[32m+[m[32m    "animation-timing-function",[m[41m[m
+[32m+[m[32m    "-webkit-animation-delay",[m[41m[m
+[32m+[m[32m    "-moz-animation-delay",[m[41m[m
+[32m+[m[32m    "-ms-animation-delay",[m[41m[m
+[32m+[m[32m    "-o-animation-delay",[m[41m[m
+[32m+[m[32m    "animation-delay",[m[41m[m
+[32m+[m[32m    "-webkit-animation-iteration-count",[m[41m[m
+[32m+[m[32m    "-moz-animation-iteration-count",[m[41m[m
+[32m+[m[32m    "-ms-animation-iteration-count",[m[41m[m
+[32m+[m[32m    "-o-animation-iteration-count",[m[41m[m
+[32m+[m[32m    "animation-iteration-count",[m[41m[m
+[32m+[m[32m    "-webkit-animation-direction",[m[41m[m
+[32m+[m[32m    "-moz-animation-direction",[m[41m[m
+[32m+[m[32m    "-ms-animation-direction",[m[41m[m
+[32m+[m[32m    "-o-animation-direction",[m[41m[m
+[32m+[m[32m    "animation-direction",[m[41m[m
+[32m+[m[32m    "pointer-events"[m[41m[m
+[32m+[m[32m  ][m[41m[m
+[32m+[m[32m}[m[41m[m
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mindex e86fe25..0f14b80 100644[m
+[1m--- a/.gitignore[m
+[1m+++ b/.gitignore[m
+[36m@@ -1,69 +1,69 @@[m
+[31m-# Logs[m
+[31m-logs[m
+[31m-*.log[m
+[31m-npm-debug.log*[m
+[31m-yarn-debug.log*[m
+[31m-yarn-error.log*[m
+[31m-[m
+[31m-# Runtime data[m
+[31m-pids[m
+[31m-*.pid[m
+[31m-*.seed[m
+[31m-*.pid.lock[m
+[31m-[m
+[31m-# Directory for instrumented libs generated by jscoverage/JSCover[m
+[31m-lib-cov[m
+[31m-[m
+[31m-# Coverage directory used by tools like istanbul[m
+[31m-coverage[m
+[31m-[m
+[31m-# nyc test coverage[m
+[31m-.nyc_output[m
+[31m-[m
+[31m-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)[m
+[31m-.grunt[m
+[31m-[m
+[31m-# Bower dependency directory (https://bower.io/)[m
+[31m-bower_components[m
+[31m-[m
+[31m-# node-waf configuration[m
+[31m-.lock-wscript[m
+[31m-[m
+[31m-# Compiled binary addons (http://nodejs.org/api/addons.html)[m
+[31m-build/Release[m
+[31m-[m
+[31m-# Dependency directories[m
+[31m-node_modules/[m
+[31m-jspm_packages/[m
+[31m-[m
+[31m-# Typescript v1 declaration files[m
+[31m-typings/[m
+[31m-[m
+[31m-# Optional npm cache directory[m
+[31m-.npm[m
+[31m-[m
+[31m-# Optional eslint cache[m
+[31m-.eslintcache[m
+[31m-[m
+[31m-# Optional REPL history[m
+[31m-.node_repl_history[m
+[31m-[m
+[31m-# Output of 'npm pack'[m
+[31m-*.tgz[m
+[31m-[m
+[31m-# dotenv environment variables file[m
+[31m-.env[m
+[31m-[m
+[31m-# gatsby files[m
+[31m-.cache/[m
+[31m-public[m
+[31m-[m
+[31m-# Mac files[m
+[31m-.DS_Store[m
+[31m-[m
+[31m-# Yarn[m
+[31m-yarn-error.log[m
+[31m-.pnp/[m
+[31m-.pnp.js[m
+[31m-# Yarn Integrity file[m
+[31m-.yarn-integrity[m
+[32m+[m[32m# Logs[m[41m[m
+[32m+[m[32mlogs[m[41m[m
+[32m+[m[32m*.log[m[41m[m
+[32m+[m[32mnpm-debug.log*[m[41m[m
+[32m+[m[32myarn-debug.log*[m[41m[m
+[32m+[m[32myarn-error.log*[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Runtime data[m[41m[m
+[32m+[m[32mpids[m[41m[m
+[32m+[m[32m*.pid[m[41m[m
+[32m+[m[32m*.seed[m[41m[m
+[32m+[m[32m*.pid.lock[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Directory for instrumented libs generated by jscoverage/JSCover[m[41m[m
+[32m+[m[32mlib-cov[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Coverage directory used by tools like istanbul[m[41m[m
+[32m+[m[32mcoverage[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# nyc test coverage[m[41m[m
+[32m+[m[32m.nyc_output[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)[m[41m[m
+[32m+[m[32m.grunt[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Bower dependency directory (https://bower.io/)[m[41m[m
+[32m+[m[32mbower_components[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# node-waf configuration[m[41m[m
+[32m+[m[32m.lock-wscript[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Compiled binary addons (http://nodejs.org/api/addons.html)[m[41m[m
+[32m+[m[32mbuild/Release[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Dependency directories[m[41m[m
+[32m+[m[32mnode_modules/[m[41m[m
+[32m+[m[32mjspm_packages/[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Typescript v1 declaration files[m[41m[m
+[32m+[m[32mtypings/[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Optional npm cache directory[m[41m[m
+[32m+[m[32m.npm[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Optional eslint cache[m[41m[m
+[32m+[m[32m.eslintcache[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Optional REPL history[m[41m[m
+[32m+[m[32m.node_repl_history[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Output of 'npm pack'[m[41m[m
+[32m+[m[32m*.tgz[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# dotenv environment variables file[m[41m[m
+[32m+[m[32m.env[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# gatsby files[m[41m[m
+[32m+[m[32m.cache/[m[41m[m
+[32m+[m[32mpublic[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Mac files[m[41m[m
+[32m+[m[32m.DS_Store[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Yarn[m[41m[m
+[32m+[m[32myarn-error.log[m[41m[m
+[32m+[m[32m.pnp/[m[41m[m
+[32m+[m[32m.pnp.js[m[41m[m
+[32m+[m[32m# Yarn Integrity file[m[41m[m
+[32m+[m[32m.yarn-integrity[m[41m[m
+[1mdiff --git a/.prettierrc b/.prettierrc[m
+[1mindex c3e0328..5272dd7 100644[m
+[1m--- a/.prettierrc[m
+[1m+++ b/.prettierrc[m
+[36m@@ -1,5 +1,5 @@[m
+[31m-{[m
+[31m-  "semi": true,[m
+[31m-  "singleQuote": true,[m
+[31m-  "trailingComma": "es5"[m
+[31m-}[m
+[32m+[m[32m{[m[41m[m
+[32m+[m[32m  "semi": true,[m[41m[m
+[32m+[m[32m  "singleQuote": true,[m[41m[m
+[32m+[m[32m  "trailingComma": "es5"[m[41m[m
+[32m+[m[32m}[m[41m[m
+[1mdiff --git a/LICENSE b/LICENSE[m
+[1mindex 5169a5e..de3fb74 100644[m
+[1m--- a/LICENSE[m
+[1m+++ b/LICENSE[m
+[36m@@ -1,22 +1,22 @@[m
+[31m-The MIT License (MIT)[m
+[31m-[m
+[31m-Copyright (c) 2015 gatsbyjs[m
+[31m-[m
+[31m-Permission is hereby granted, free of charge, to any person obtaining a copy[m
+[31m-of this software and associated documentation files (the "Software"), to deal[m
+[31m-in the Software without restriction, including without limitation the rights[m
+[31m-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell[m
+[31m-copies of the Software, and to permit persons to whom the Software is[m
+[31m-furnished to do so, subject to the following conditions:[m
+[31m-[m
+[31m-The above copyright notice and this permission notice shall be included in all[m
+[31m-copies or substantial portions of the Software.[m
+[31m-[m
+[31m-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR[m
+[31m-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,[m
+[31m-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE[m
+[31m-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER[m
+[31m-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,[m
+[31m-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE[m
+[31m-SOFTWARE.[m
+[31m-[m
+[32m+[m[32mThe MIT License (MIT)[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mCopyright (c) 2015 gatsbyjs[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mPermission is hereby granted, free of charge, to any person obtaining a copy[m[41m[m
+[32m+[m[32mof this software and associated documentation files (the "Software"), to deal[m[41m[m
+[32m+[m[32min the Software without restriction, including without limitation the rights[m[41m[m
+[32m+[m[32mto use, copy, modify, merge, publish, distribute, sublicense, and/or sell[m[41m[m
+[32m+[m[32mcopies of the Software, and to permit persons to whom the Software is[m[41m[m
+[32m+[m[32mfurnished to do so, subject to the following conditions:[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mThe above copyright notice and this permission notice shall be included in all[m[41m[m
+[32m+[m[32mcopies or substantial portions of the Software.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR[m[41m[m
+[32m+[m[32mIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,[m[41m[m
+[32m+[m[32mFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE[m[41m[m
+[32m+[m[32mAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER[m[41m[m
+[32m+[m[32mLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,[m[41m[m
+[32m+[m[32mOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE[m[41m[m
+[32m+[m[32mSOFTWARE.[m[41m[m
+[32m+[m[41m[m
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 864b655..49f4e06 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,11 +1,11 @@[m
+[31m-<h1 align="center">[m
+[31m-  Gatsby front end for researchingeducation.com[m
+[31m-</h1>[m
+[31m-[m
+[31m-## Info[m
+[31m-[m
+[31m-Researching Education is a newsletter written exclusively for teachers and educational researchers in the higher education sector.[m
+[31m-[m
+[31m-## 💫 Status[m
+[31m-[m
+[31m-[![Netlify Status](https://api.netlify.com/api/v1/badges/1b83cac7-3b3c-492a-9116-cb0d4164ac75/deploy-status)](https://app.netlify.com/sites/distracted-spence-732014/deploys)[m
+[32m+[m[32m<h1 align="center">[m[41m[m
+[32m+[m[32m  Gatsby front end for researchingeducation.com[m[41m[m
+[32m+[m[32m</h1>[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m## Info[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mResearching Education is a newsletter written exclusively for teachers and educational researchers in the higher education sector.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m## 💫 Status[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m[![Netlify Status](https://api.netlify.com/api/v1/badges/1b83cac7-3b3c-492a-9116-cb0d4164ac75/deploy-status)](https://app.netlify.com/sites/distracted-spence-732014/deploys)[m[41m[m
+[1mdiff --git a/gatsby-browser.js b/gatsby-browser.js[m
+[1mindex b1e5c31..5424ddf 100644[m
+[1m--- a/gatsby-browser.js[m
+[1m+++ b/gatsby-browser.js[m
+[36m@@ -1,7 +1,7 @@[m
+[31m-/**[m
+[31m- * Implement Gatsby's Browser APIs in this file.[m
+[31m- *[m
+[31m- * See: https://www.gatsbyjs.org/docs/browser-apis/[m
+[31m- */[m
+[31m-[m
+[31m-// You can delete this file if you're not using it[m
+[32m+[m[32m/**[m[41m[m
+[32m+[m[32m * Implement Gatsby's Browser APIs in this file.[m[41m[m
+[32m+[m[32m *[m[41m[m
+[32m+[m[32m * See: https://www.gatsbyjs.org/docs/browser-apis/[m[41m[m
+[32m+[m[32m */[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// You can delete this file if you're not using it[m[41m[m
+[1mdiff --git a/gatsby-config.js b/gatsby-config.js[m
+[1mindex c5f2e6c..655d2b3 100644[m
+[1m--- a/gatsby-config.js[m
+[1m+++ b/gatsby-config.js[m
+[36m@@ -1,59 +1,59 @@[m
+[31m-module.exports = {[m
+[31m-  siteMetadata: {[m
+[31m-    title: `Researching Education.`,[m
+[31m-    subTitle: 'Discussing practice and research in learning',[m
+[31m-    description: ``,[m
+[31m-    author: `@TomDSweeney`,[m
+[31m-  },[m
+[31m-  plugins: [[m
+[31m-    {[m
+[31m-      resolve: 'gatsby-source-wordpress',[m
+[31m-      options: {[m
+[31m-        // Base URL of Wordpress site[m
+[31m-        baseUrl: 'lsri.info/researchingeducation',[m
+[31m-        protocol: 'https',[m
+[31m-        // we are not hosting this on wordpress.com[m
+[31m-        hostingWPCOM: false,[m
+[31m-        // we are using the Advanced Custom Fields plugin[m
+[31m-        useACF: true,[m
+[31m-        verboseOutput: true,[m
+[31m-        // how many pagrs are retreived on each API request[m
+[31m-        perPage: 50,[m
+[31m-        // Number of requests sent at once[m
+[31m-        concurrentRequests: 10,[m
+[31m-        // Set WP REST API routes whitelists[m
+[31m-        // and blacklists using glob patterns.[m
+[31m-        // Defaults to whitelist the routes shown[m
+[31m-        // in the example below.[m
+[31m-        // See: https://github.com/isaacs/minimatch[m
+[31m-        // Example:  `["/*/*/comments", "/yoast/**"]`[m
+[31m-        // ` will either include or exclude routes ending in `comments` and[m
+[31m-        // all routes that begin with `yoast` from fetch.[m
+[31m-        // Whitelisted routes using glob patterns[m
+[31m-        includedRoutes: [[m
+[31m-          '**/*/*/categories',[m
+[31m-          '**/*/*/posts',[m
+[31m-          '**/*/*/pages',[m
+[31m-          '**/*/*/media',[m
+[31m-          '**/*/*/tags',[m
+[31m-          '**/*/*/taxonomies',[m
+[31m-          '**/*/*/users',[m
+[31m-          '**/*/*/menus'[m
+[31m-        ],[m
+[31m-      },[m
+[31m-    },[m
+[31m-    `gatsby-plugin-react-helmet`,[m
+[31m-    {[m
+[31m-      resolve: `gatsby-source-filesystem`,[m
+[31m-      options: {[m
+[31m-        name: `images`,[m
+[31m-        path: `${__dirname}/src/images`,[m
+[31m-      },[m
+[31m-    },[m
+[31m-    `gatsby-transformer-sharp`,[m
+[31m-    `gatsby-plugin-sharp`,[m
+[31m-    // this (optional) plugin enables Progressive Web App + Offline functionality[m
+[31m-    // To learn more, visit: https://gatsby.app/offline[m
+[31m-    'gatsby-plugin-offline',[m
+[31m-  ],[m
+[31m-};[m
+[32m+[m[32mmodule.exports = {[m[41m[m
+[32m+[m[32m  siteMetadata: {[m[41m[m
+[32m+[m[32m    title: `Researching Education.`,[m[41m[m
+[32m+[m[32m    subTitle: 'Discussing practice and research in learning',[m[41m[m
+[32m+[m[32m    description: ``,[m[41m[m
+[32m+[m[32m    author: `@TomDSweeney`,[m[41m[m
+[32m+[m[32m  },[m[41m[m
+[32m+[m[32m  plugins: [[m[41m[m
+[32m+[m[32m    {[m[41m[m
+[32m+[m[32m      resolve: 'gatsby-source-wordpress',[m[41m[m
+[32m+[m[32m      options: {[m[41m[m
+[32m+[m[32m        // Base URL of Wordpress site[m[41m[m
+[32m+[m[32m        baseUrl: 'lsri.info/researchingeducation',[m[41m[m
+[32m+[m[32m        protocol: 'https',[m[41m[m
+[32m+[m[32m        // we are not hosting this on wordpress.com[m[41m[m
+[32m+[m[32m        hostingWPCOM: false,[m[41m[m
+[32m+[m[32m        // we are using the Advanced Custom Fields plugin[m[41m[m
+[32m+[m[32m        useACF: true,[m[41m[m
+[32m+[m[32m        verboseOutput: true,[m[41m[m
+[32m+[m[32m        // how many pagrs are retreived on each API request[m[41m[m
+[32m+[m[32m        perPage: 50,[m[41m[m
+[32m+[m[32m        // Number of requests sent at once[m[41m[m
+[32m+[m[32m        concurrentRequests: 10,[m[41m[m
+[32m+[m[32m        // Set WP REST API routes whitelists[m[41m[m
+[32m+[m[32m        // and blacklists using glob patterns.[m[41m[m
+[32m+[m[32m        // Defaults to whitelist the routes shown[m[41m[m
+[32m+[m[32m        // in the example below.[m[41m[m
+[32m+[m[32m        // See: https://github.com/isaacs/minimatch[m[41m[m
+[32m+[m[32m        // Example:  `["/*/*/comments", "/yoast/**"]`[m[41m[m
+[32m+[m[32m        // ` will either include or exclude routes ending in `comments` and[m[41m[m
+[32m+[m[32m        // all routes that begin with `yoast` from fetch.[m[41m[m
+[32m+[m[32m        // Whitelisted routes using glob patterns[m[41m[m
+[32m+[m[32m        includedRoutes: [[m[41m[m
+[32m+[m[32m          '**/*/*/categories',[m[41m[m
+[32m+[m[32m          '**/*/*/posts',[m[41m[m
+[32m+[m[32m          '**/*/*/pages',[m[41m[m
+[32m+[m[32m          '**/*/*/media',[m[41m[m
+[32m+[m[32m          '**/*/*/tags',[m[41m[m
+[32m+[m[32m          '**/*/*/taxonomies',[m[41m[m
+[32m+[m[32m          '**/*/*/users',[m[41m[m
+[32m+[m[32m          '**/*/*/menus'[m[41m[m
+[32m+[m[32m        ],[m[41m[m
+[32m+[m[32m      },[m[41m[m
+[32m+[m[32m    },[m[41m[m
+[32m+[m[32m    `gatsby-plugin-react-helmet`,[m[41m[m
+[32m+[m[32m    {[m[41m[m
+[32m+[m[32m      resolve: `gatsby-source-filesystem`,[m[41m[m
+[32m+[m[32m      options: {[m[41m[m
+[32m+[m[32m        name: `images`,[m[41m[m
+[32m+[m[32m        path: `${__dirname}/src/images`,[m[41m[m
+[32m+[m[32m      },[m[41m[m
+[32m+[m[32m    },[m[41m[m
+[32m+[m[32m    `gatsby-transformer-sharp`,[m[41m[m
+[32m+[m[32m    `gatsby-plugin-sharp`,[m[41m[m
+[32m+[m[32m    // this (optional) plugin enables Progressive Web App + Offline functionality[m[41m[m
+[32m+[m[32m    // To learn more, visit: https://gatsby.app/offline[m[41m[m
+[32m+[m[32m    'gatsby-plugin-offline',[m[41m[m
+[32m+[m[32m  ],[m[41m[m
+[32m+[m[32m};[m[41m[m
+[1mdiff --git a/gatsby-node.js b/gatsby-node.js[m
+[1mindex 1a395a2..e48978d 100644[m
+[1m--- a/gatsby-node.js[m
+[1m+++ b/gatsby-node.js[m
+[36m@@ -1,130 +1,130 @@[m
+[31m-/**[m
+[31m- * Implement Gatsby's Node APIs in this file.[m
+[31m- *[m
+[31m- * See: https://www.gatsbyjs.org/docs/node-apis/[m
+[31m- */[m
+[31m-[m
+[31m-const _ = require(`lodash`)[m
+[31m-const Promise = require(`bluebird`)[m
+[31m-const path = require(`path`)[m
+[31m-const slash = require(`slash`)[m
+[31m-[m
+[31m-// Implement the Gatsby API “createPages”. This is[m
+[31m-// called after the Gatsby bootstrap is finished so you have[m
+[31m-// access to any information necessary to programmatically[m
+[31m-// create pages.[m
+[31m-// Will create pages for Wordpress pages (route : /{slug})[m
+[31m-// Will create pages for Wordpress posts (route : /post/{slug})[m
+[31m-exports.createPages = ({ graphql, actions }) => {[m
+[31m-  const { createPage } = actions[m
+[31m-  return new Promise((resolve, reject) => {[m
+[31m-    // The “graphql” function allows us to run arbitrary[m
+[31m-    // queries against the local Wordpress graphql schema. Think of[m
+[31m-    // it like the site has a built-in database constructed[m
+[31m-    // from the fetched data that you can run queries against.[m
+[31m-[m
+[31m-    // ==== PAGES (WORDPRESS NATIVE) ====[m
+[31m-    graphql([m
+[31m-      `[m
+[31m-        {[m
+[31m-          allWordpressPage {[m
+[31m-            edges {[m
+[31m-              node {[m
+[31m-                id[m
+[31m-                slug[m
+[31m-                status[m
+[31m-                template[m
+[31m-              }[m
+[31m-            }[m
+[31m-          }[m
+[31m-        }[m
+[31m-      `[m
+[31m-    )[m
+[31m-      .then(result => {[m
+[31m-        if (result.errors) {[m
+[31m-          console.log(result.errors)[m
+[31m-          reject(result.errors)[m
+[31m-        }[m
+[31m-[m
+[31m-        // Create Page pages.[m
+[31m-        const pageTemplate = path.resolve(`./src/templates/page.js`)[m
+[31m-        // We want to create a detailed page for each[m
+[31m-        // page node. We'll just use the Wordpress Slug for the slug.[m
+[31m-        // The Page ID is prefixed with 'PAGE_'[m
+[31m-        _.each(result.data.allWordpressPage.edges, edge => {[m
+[31m-          // Gatsby uses Redux to manage its internal state.[m
+[31m-          // Plugins and sites can use functions like "createPage"[m
+[31m-          // to interact with Gatsby.[m
+[31m-          createPage({[m
+[31m-            // Each page is required to have a `path` as well[m
+[31m-            // as a template component. The `context` is[m
+[31m-            // optional but is often necessary so the template[m
+[31m-            // can query data specific to each page.[m
+[31m-            path: `/${edge.node.slug}/`,[m
+[31m-            component: slash(pageTemplate),[m
+[31m-            context: {[m
+[31m-              id: edge.node.id,[m
+[31m-            },[m
+[31m-          })[m
+[31m-        })[m
+[31m-      })[m
+[31m-      // ==== END PAGES ====[m
+[31m-[m
+[31m-      // ==== POSTS (WORDPRESS NATIVE AND ACF) ====[m
+[31m-      .then(() => {[m
+[31m-        graphql([m
+[31m-          `[m
+[31m-            {[m
+[31m-              allWordpressPost {[m
+[31m-                edges {[m
+[31m-                  node {[m
+[31m-                    acf {[m
+[31m-                      external_article[m
+[31m-                    }[m
+[31m-                    id[m
+[31m-                    slug[m
+[31m-                    title[m
+[31m-                    content[m
+[31m-                    excerpt[m
+[31m-                    categories {[m
+[31m-                      id[m
+[31m-                      name[m
+[31m-                    }[m
+[31m-                    status[m
+[31m-                    date(formatString: "DD, MMM, YYYY")[m
+[31m-                    author {[m
+[31m-                      name[m
+[31m-                      description[m
+[31m-                      avatar_urls {[m
+[31m-                        wordpress_48[m
+[31m-                      }[m
+[31m-                    }[m
+[31m-                  }[m
+[31m-                }[m
+[31m-              }[m
+[31m-            }[m
+[31m-          `[m
+[31m-        ).then(result => {[m
+[31m-          if (result.errors) {[m
+[31m-            console.log(result.errors)[m
+[31m-            reject(result.errors)[m
+[31m-          }[m
+[31m-          const postTemplate = path.resolve(`./src/templates/post.js`)[m
+[31m-          // We want to create a detailed page for each[m
+[31m-          // post node. We'll just use the Wordpress Slug for the slug.[m
+[31m-          // The Post ID is prefixed with 'POST_'[m
+[31m-          _.each(result.data.allWordpressPost.edges, edge => {[m
+[31m-            createPage({[m
+[31m-              path: edge.node.slug,[m
+[31m-              component: slash(postTemplate),[m
+[31m-              context: {[m
+[31m-                id: edge.node.id,[m
+[31m-              },[m
+[31m-            })[m
+[31m-          })[m
+[31m-          resolve()[m
+[31m-        })[m
+[31m-      })[m
+[31m-    // ==== END POSTS ====[m
+[31m-  })[m
+[31m-}[m
+[32m+[m[32m/**[m[41m[m
+[32m+[m[32m * Implement Gatsby's Node APIs in this file.[m[41m[m
+[32m+[m[32m *[m[41m[m
+[32m+[m[32m * See: https://www.gatsbyjs.org/docs/node-apis/[m[41m[m
+[32m+[m[32m */[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mconst _ = require(`lodash`)[m[41m[m
+[32m+[m[32mconst Promise = require(`bluebird`)[m[41m[m
+[32m+[m[32mconst path = require(`path`)[m[41m[m
+[32m+[m[32mconst slash = require(`slash`)[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// Implement the Gatsby API “createPages”. This is[m[41m[m
+[32m+[m[32m// called after the Gatsby bootstrap is finished so you have[m[41m[m
+[32m+[m[32m// access to any information necessary to programmatically[m[41m[m
+[32m+[m[32m// create pages.[m[41m[m
+[32m+[m[32m// Will create pages for Wordpress pages (route : /{slug})[m[41m[m
+[32m+[m[32m// Will create pages for Wordpress posts (route : /post/{slug})[m[41m[m
+[32m+[m[32mexports.createPages = ({ graphql, actions }) => {[m[41m[m
+[32m+[m[32m  const { createPage } = actions[m[41m[m
+[32m+[m[32m  return new Promise((resolve, reject) => {[m[41m[m
+[32m+[m[32m    // The “graphql” function allows us to run arbitrary[m[41m[m
+[32m+[m[32m    // queries against the local Wordpress graphql schema. Think of[m[41m[m
+[32m+[m[32m    // it like the site has a built-in database constructed[m[41m[m
+[32m+[m[32m    // from the fetched data that you can run queries against.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m    // ==== PAGES (WORDPRESS NATIVE) ====[m[41m[m
+[32m+[m[32m    graphql([m[41m[m
+[32m+[m[32m      `[m[41m[m
+[32m+[m[32m        {[m[41m[m
+[32m+[m[32m          allWordpressPage {[m[41m[m
+[32m+[m[32m            edges {[m[41m[m
+[32m+[m[32m              node {[m[41m[m
+[32m+[m[32m                id[m[41m[m
+[32m+[m[32m                slug[m[41m[m
+[32m+[m[32m                status[m[41m[m
+[32m+[m[32m                template[m[41m[m
+[32m+[m[32m              }[m[41m[m
+[32m+[m[32m            }[m[41m[m
+[32m+[m[32m          }[m[41m[m
+[32m+[m[32m        }[m[41m[m
+[32m+[m[32m      `[m[41m[m
+[32m+[m[32m    )[m[41m[m
+[32m+[m[32m      .then(result => {[m[41m[m
+[32m+[m[32m        if (result.errors) {[m[41m[m
+[32m+[m[32m          console.log(result.errors)[m[41m[m
+[32m+[m[32m          reject(result.errors)[m[41m[m
+[32m+[m[32m        }[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m        // Create Page pages.[m[41m[m
+[32m+[m[32m        const pageTemplate = path.resolve(`./src/templates/page.js`)[m[41m[m
+[32m+[m[32m        // We want to create a detailed page for each[m[41m[m
+[32m+[m[32m        // page node. We'll just use the Wordpress Slug for the slug.[m[41m[m
+[32m+[m[32m        // The Page ID is prefixed with 'PAGE_'[m[41m[m
+[32m+[m[32m        _.each(result.data.allWordpressPage.edges, edge => {[m[41m[m
+[32m+[m[32m          // Gatsby uses Redux to manage its internal state.[m[41m[m
+[32m+[m[32m          // Plugins and sites can use functions like "createPage"[m[41m[m
+[32m+[m[32m          // to interact with Gatsby.[m[41m[m
+[32m+[m[32m          createPage({[m[41m[m
+[32m+[m[32m            // Each page is required to have a `path` as well[m[41m[m
+[32m+[m[32m            // as a template component. The `context` is[m[41m[m
+[32m+[m[32m            // optional but is often necessary so the template[m[41m[m
+[32m+[m[32m            // can query data specific to each page.[m[41m[m
+[32m+[m[32m            path: `/${edge.node.slug}/`,[m[41m[m
+[32m+[m[32m            component: slash(pageTemplate),[m[41m[m
+[32m+[m[32m            context: {[m[41m[m
+[32m+[m[32m              id: edge.node.id,[m[41m[m
+[32m+[m[32m            },[m[41m[m
+[32m+[m[32m          })[m[41m[m
+[32m+[m[32m        })[m[41m[m
+[32m+[m[32m      })[m[41m[m
+[32m+[m[32m      // ==== END PAGES ====[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m      // ==== POSTS (WORDPRESS NATIVE AND ACF) ====[m[41m[m
+[32m+[m[32m      .then(() => {[m[41m[m
+[32m+[m[32m        graphql([m[41m[m
+[32m+[m[32m          `[m[41m[m
+[32m+[m[32m            {[m[41m[m
+[32m+[m[32m              allWordpressPost {[m[41m[m
+[32m+[m[32m                edges {[m[41m[m
+[32m+[m[32m                  node {[m[41m[m
+[32m+[m[32m                    acf {[m[41m[m
+[32m+[m[32m                      external_article[m[41m[m
+[32m+[m[32m                    }[m[41m[m
+[32m+[m[32m                    id[m[41m[m
+[32m+[m[32m                    slug[m[41m[m
+[32m+[m[32m                    title[m[41m[m
+[32m+[m[32m                    content[m[41m[m
+[32m+[m[32m                    excerpt[m[41m[m
+[32m+[m[32m                    categories {[m[41m[m
+[32m+[m[32m                      id[m[41m[m
+[32m+[m[32m                      name[m[41m[m
+[32m+[m[32m                    }[m[41m[m
+[32m+[m[32m                    status[m[41m[m
+[32m+[m[32m                    date(formatString: "DD, MMM, YYYY")[m[41m[m
+[32m+[m[32m                    author {[m[41m[m
+[32m+[m[32m                      name[m[41m[m
+[32m+[m[32m                      description[m[41m[m
+[32m+[m[32m                      avatar_urls {[m[41m[m
+[32m+[m[32m                        wordpress_48[m[41m[m
+[32m+[m[32m                      }[m[41m[m
+[32m+[m[32m                    }[m[41m[m
+[32m+[m[32m                  }[m[41m[m
+[32m+[m[32m                }[m[41m[m
+[32m+[m[32m              }[m[41m[m
+[32m+[m[32m            }[m[41m[m
+[32m+[m[32m          `[m[41m[m
+[32m+[m[32m        ).then(result => {[m[41m[m
+[32m+[m[32m          if (result.errors) {[m[41m[m
+[32m+[m[32m            console.log(result.errors)[m[41m[m
+[32m+[m[32m            reject(result.errors)[m[41m[m
+[32m+[m[32m          }[m[41m[m
+[32m+[m[32m          const postTemplate = path.resolve(`./src/templates/post.js`)[m[41m[m
+[32m+[m[32m          // We want to create a detailed page for each[m[41m[m
+[32m+[m[32m          // post node. We'll just use the Wordpress Slug for the slug.[m[41m[m
+[32m+[m[32m          // The Post ID is prefixed with 'POST_'[m[41m[m
+[32m+[m[32m          _.each(result.data.allWordpressPost.edges, edge => {[m[41m[m
+[32m+[m[32m            createPage({[m[41m[m
+[32m+[m[32m              path: edge.node.slug,[m[41m[m
+[32m+[m[32m              component: slash(postTemplate),[m[41m[m
+[32m+[m[32m              context: {[m[41m[m
+[32m+[m[32m                id: edge.node.id,[m[41m[m
+[32m+[m[32m              },[m[41m[m
+[32m+[m[32m            })[m[41m[m
+[32m+[m[32m          })[m[41m[m
+[32m+[m[32m          resolve()[m[41m[m
+[32m+[m[32m        })[m[41m[m
+[32m+[m[32m      })[m[41m[m
+[32m+[m[32m    // ==== END POSTS ====[m[41m[m
+[32m+[m[32m  })[m[41m[m
+[32m+[m[32m}[m[41m[m
+[1mdiff --git a/gatsby-ssr.js b/gatsby-ssr.js[m
+[1mindex b17b8fc..ba97120 100644[m
+[1m--- a/gatsby-ssr.js[m
+[1m+++ b/gatsby-ssr.js[m
+[36m@@ -1,7 +1,7 @@[m
+[31m-/**[m
+[31m- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.[m
+[31m- *[m
+[31m- * See: https://www.gatsbyjs.org/docs/ssr-apis/[m
+[31m- */[m
+[31m-[m
+[31m-// You can delete this file if you're not using it[m
+[32m+[m[32m/**[m[41m[m
+[32m+[m[32m * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.[m[41m[m
+[32m+[m[32m *[m[41m[m
+[32m+[m[32m * See: https://www.gatsbyjs.org/docs/ssr-apis/[m[41m[m
+[32m+[m[32m */[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// You can delete this file if you're not using it[m[41m[m
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex c8bc04d..7fd2e89 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -1,15837 +1,15837 @@[m
+[31m-{[m
+[31m-  "name": "gatsby-starter-default",[m
+[31m-  "version": "0.1.0",[m
+[31m-  "lockfileVersion": 1,[m
+[31m-  "requires": true,[m
+[31m-  "dependencies": {[m
+[31m-    "@babel/code-frame": {[m
+[31m-      "version": "7.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.0.0.tgz",[m
+[31m-      "integrity": "sha512-OfC2uemaknXr87bdLUkWog7nYuliM9Ij5HUcajsVcMCpQrcLmtxRbVFTIqmcSkSeYRBFBRxs2FiUqFJDLdiebA==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/highlight": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/core": {[m
+[31m-      "version": "7.2.2",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.2.2.tgz",[m
+[31m-      "integrity": "sha512-59vB0RWt09cAct5EIe58+NzGP4TFSD3Bz//2/ELy3ZeTeKF6VTD1AXlH8BGGbCX0PuobZBsIzO7IAI9PH67eKw==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/code-frame": "^7.0.0",[m
+[31m-        "@babel/generator": "^7.2.2",[m
+[31m-        "@babel/helpers": "^7.2.0",[m
+[31m-        "@babel/parser": "^7.2.2",[m
+[31m-        "@babel/template": "^7.2.2",[m
+[31m-        "@babel/traverse": "^7.2.2",[m
+[31m-        "@babel/types": "^7.2.2",[m
+[31m-        "convert-source-map": "^1.1.0",[m
+[31m-        "debug": "^4.1.0",[m
+[31m-        "json5": "^2.1.0",[m
+[31m-        "lodash": "^4.17.10",[m
+[31m-        "resolve": "^1.3.2",[m
+[31m-        "semver": "^5.4.1",[m
+[31m-        "source-map": "^0.5.0"[m
+[31m-      },[m
+[31m-      "dependencies": {[m
+[31m-        "debug": {[m
+[31m-          "version": "4.1.1",[m
+[31m-          "resolved": "https://registry.npmjs.org/debug/-/debug-4.1.1.tgz",[m
+[31m-          "integrity": "sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==",[m
+[31m-          "requires": {[m
+[31m-            "ms": "^2.1.1"[m
+[31m-          }[m
+[31m-        }[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/generator": {[m
+[31m-      "version": "7.2.2",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.2.2.tgz",[m
+[31m-      "integrity": "sha512-I4o675J/iS8k+P38dvJ3IBGqObLXyQLTxtrR4u9cSUJOURvafeEWb/pFMOTwtNrmq73mJzyF6ueTbO1BtN0Zeg==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/types": "^7.2.2",[m
+[31m-        "jsesc": "^2.5.1",[m
+[31m-        "lodash": "^4.17.10",[m
+[31m-        "source-map": "^0.5.0",[m
+[31m-        "trim-right": "^1.0.1"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-annotate-as-pure": {[m
+[31m-      "version": "7.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.0.0.tgz",[m
+[31m-      "integrity": "sha512-3UYcJUj9kvSLbLbUIfQTqzcy5VX7GRZ/CCDrnOaZorFFM01aXp1+GJwuFGV4NDDoAS+mOUyHcO6UD/RfqOks3Q==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-builder-binary-assignment-operator-visitor": {[m
+[31m-      "version": "7.1.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-builder-binary-assignment-operator-visitor/-/helper-builder-binary-assignment-operator-visitor-7.1.0.tgz",[m
+[31m-      "integrity": "sha512-qNSR4jrmJ8M1VMM9tibvyRAHXQs2PmaksQF7c1CGJNipfe3D8p+wgNwgso/P2A2r2mdgBWAXljNWR0QRZAMW8w==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/helper-explode-assignable-expression": "^7.1.0",[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-builder-react-jsx": {[m
+[31m-      "version": "7.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.0.0.tgz",[m
+[31m-      "integrity": "sha512-ebJ2JM6NAKW0fQEqN8hOLxK84RbRz9OkUhGS/Xd5u56ejMfVbayJ4+LykERZCOUM6faa6Fp3SZNX3fcT16MKHw==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/types": "^7.0.0",[m
+[31m-        "esutils": "^2.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-call-delegate": {[m
+[31m-      "version": "7.1.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-call-delegate/-/helper-call-delegate-7.1.0.tgz",[m
+[31m-      "integrity": "sha512-YEtYZrw3GUK6emQHKthltKNZwszBcHK58Ygcis+gVUrF4/FmTVr5CCqQNSfmvg2y+YDEANyYoaLz/SHsnusCwQ==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/helper-hoist-variables": "^7.0.0",[m
+[31m-        "@babel/traverse": "^7.1.0",[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-create-class-features-plugin": {[m
+[31m-      "version": "7.2.3",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.2.3.tgz",[m
+[31m-      "integrity": "sha512-xO/3Gn+2C7/eOUeb0VRnSP1+yvWHNxlpAot1eMhtoKDCN7POsyQP5excuT5UsV5daHxMWBeIIOeI5cmB8vMRgQ==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/helper-function-name": "^7.1.0",[m
+[31m-        "@babel/helper-member-expression-to-functions": "^7.0.0",[m
+[31m-        "@babel/helper-optimise-call-expression": "^7.0.0",[m
+[31m-        "@babel/helper-plugin-utils": "^7.0.0",[m
+[31m-        "@babel/helper-replace-supers": "^7.2.3"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-define-map": {[m
+[31m-      "version": "7.1.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-define-map/-/helper-define-map-7.1.0.tgz",[m
+[31m-      "integrity": "sha512-yPPcW8dc3gZLN+U1mhYV91QU3n5uTbx7DUdf8NnPbjS0RMwBuHi9Xt2MUgppmNz7CJxTBWsGczTiEp1CSOTPRg==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/helper-function-name": "^7.1.0",[m
+[31m-        "@babel/types": "^7.0.0",[m
+[31m-        "lodash": "^4.17.10"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-explode-assignable-expression": {[m
+[31m-      "version": "7.1.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-explode-assignable-expression/-/helper-explode-assignable-expression-7.1.0.tgz",[m
+[31m-      "integrity": "sha512-NRQpfHrJ1msCHtKjbzs9YcMmJZOg6mQMmGRB+hbamEdG5PNpaSm95275VD92DvJKuyl0s2sFiDmMZ+EnnvufqA==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/traverse": "^7.1.0",[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-function-name": {[m
+[31m-      "version": "7.1.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.1.0.tgz",[m
+[31m-      "integrity": "sha512-A95XEoCpb3TO+KZzJ4S/5uW5fNe26DjBGqf1o9ucyLyCmi1dXq/B3c8iaWTfBk3VvetUxl16e8tIrd5teOCfGw==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/helper-get-function-arity": "^7.0.0",[m
+[31m-        "@babel/template": "^7.1.0",[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-get-function-arity": {[m
+[31m-      "version": "7.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-get-function-arity/-/helper-get-function-arity-7.0.0.tgz",[m
+[31m-      "integrity": "sha512-r2DbJeg4svYvt3HOS74U4eWKsUAMRH01Z1ds1zx8KNTPtpTL5JAsdFv8BNyOpVqdFhHkkRDIg5B4AsxmkjAlmQ==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-hoist-variables": {[m
+[31m-      "version": "7.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-hoist-variables/-/helper-hoist-variables-7.0.0.tgz",[m
+[31m-      "integrity": "sha512-Ggv5sldXUeSKsuzLkddtyhyHe2YantsxWKNi7A+7LeD12ExRDWTRk29JCXpaHPAbMaIPZSil7n+lq78WY2VY7w==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-member-expression-to-functions": {[m
+[31m-      "version": "7.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-member-expression-to-functions/-/helper-member-expression-to-functions-7.0.0.tgz",[m
+[31m-      "integrity": "sha512-avo+lm/QmZlv27Zsi0xEor2fKcqWG56D5ae9dzklpIaY7cQMK5N8VSpaNVPPagiqmy7LrEjK1IWdGMOqPu5csg==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-module-imports": {[m
+[31m-      "version": "7.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-module-imports/-/helper-module-imports-7.0.0.tgz",[m
+[31m-      "integrity": "sha512-aP/hlLq01DWNEiDg4Jn23i+CXxW/owM4WpDLFUbpjxe4NS3BhLVZQ5i7E0ZrxuQ/vwekIeciyamgB1UIYxxM6A==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-module-transforms": {[m
+[31m-      "version": "7.2.2",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-module-transforms/-/helper-module-transforms-7.2.2.tgz",[m
+[31m-      "integrity": "sha512-YRD7I6Wsv+IHuTPkAmAS4HhY0dkPobgLftHp0cRGZSdrRvmZY8rFvae/GVu3bD00qscuvK3WPHB3YdNpBXUqrA==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/helper-module-imports": "^7.0.0",[m
+[31m-        "@babel/helper-simple-access": "^7.1.0",[m
+[31m-        "@babel/helper-split-export-declaration": "^7.0.0",[m
+[31m-        "@babel/template": "^7.2.2",[m
+[31m-        "@babel/types": "^7.2.2",[m
+[31m-        "lodash": "^4.17.10"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-optimise-call-expression": {[m
+[31m-      "version": "7.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-optimise-call-expression/-/helper-optimise-call-expression-7.0.0.tgz",[m
+[31m-      "integrity": "sha512-u8nd9NQePYNQV8iPWu/pLLYBqZBa4ZaY1YWRFMuxrid94wKI1QNt67NEZ7GAe5Kc/0LLScbim05xZFWkAdrj9g==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-plugin-utils": {[m
+[31m-      "version": "7.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0.tgz",[m
+[31m-      "integrity": "sha512-CYAOUCARwExnEixLdB6sDm2dIJ/YgEAKDM1MOeMeZu9Ld/bDgVo8aiWrXwcY7OBh+1Ea2uUcVRcxKk0GJvW7QA=="[m
+[31m-    },[m
+[31m-    "@babel/helper-regex": {[m
+[31m-      "version": "7.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-regex/-/helper-regex-7.0.0.tgz",[m
+[31m-      "integrity": "sha512-TR0/N0NDCcUIUEbqV6dCO+LptmmSQFQ7q70lfcEB4URsjD0E1HzicrwUH+ap6BAQ2jhCX9Q4UqZy4wilujWlkg==",[m
+[31m-      "requires": {[m
+[31m-        "lodash": "^4.17.10"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-remap-async-to-generator": {[m
+[31m-      "version": "7.1.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-remap-async-to-generator/-/helper-remap-async-to-generator-7.1.0.tgz",[m
+[31m-      "integrity": "sha512-3fOK0L+Fdlg8S5al8u/hWE6vhufGSn0bN09xm2LXMy//REAF8kDCrYoOBKYmA8m5Nom+sV9LyLCwrFynA8/slg==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/helper-annotate-as-pure": "^7.0.0",[m
+[31m-        "@babel/helper-wrap-function": "^7.1.0",[m
+[31m-        "@babel/template": "^7.1.0",[m
+[31m-        "@babel/traverse": "^7.1.0",[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-replace-supers": {[m
+[31m-      "version": "7.2.3",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-replace-supers/-/helper-replace-supers-7.2.3.tgz",[m
+[31m-      "integrity": "sha512-GyieIznGUfPXPWu0yLS6U55Mz67AZD9cUk0BfirOWlPrXlBcan9Gz+vHGz+cPfuoweZSnPzPIm67VtQM0OWZbA==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/helper-member-expression-to-functions": "^7.0.0",[m
+[31m-        "@babel/helper-optimise-call-expression": "^7.0.0",[m
+[31m-        "@babel/traverse": "^7.2.3",[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-simple-access": {[m
+[31m-      "version": "7.1.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-simple-access/-/helper-simple-access-7.1.0.tgz",[m
+[31m-      "integrity": "sha512-Vk+78hNjRbsiu49zAPALxTb+JUQCz1aolpd8osOF16BGnLtseD21nbHgLPGUwrXEurZgiCOUmvs3ExTu4F5x6w==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/template": "^7.1.0",[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-split-export-declaration": {[m
+[31m-      "version": "7.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.0.0.tgz",[m
+[31m-      "integrity": "sha512-MXkOJqva62dfC0w85mEf/LucPPS/1+04nmmRMPEBUB++hiiThQ2zPtX/mEWQ3mtzCEjIJvPY8nuwxXtQeQwUag==",[m
+[31m-      "requires": {[m
+[31m-        "@babel/types": "^7.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "@babel/helper-wrap-function": {[m
+[31m-      "version": "7.2.0",[m
+[31m-      "resolved": "ht
