@@ -10,11 +10,12 @@ const Header = ({ siteTitle, siteSubtitle }) => (
         <Link
           to="/"
           style={{
-            fontFamily: 'EB Garamond',
+            fontFamily: 'Oswald',
+            textTransform: 'uppercase',
             fontStyle: 'normal',
-            fontWeight: '800',
+            fontWeight: '400',
             lineHeight: 'normal',
-            fontSize: '2.1rem',
+            fontSize: '2rem',
             letterSpacing: '-0.04em',
             color: `#861E1E`,
             textDecoration: `none`,
@@ -23,7 +24,6 @@ const Header = ({ siteTitle, siteSubtitle }) => (
           {siteTitle}
         </Link>
       </h1>
-
       <MainMenu />
     </div>
   </div>

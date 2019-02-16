@@ -658,20 +658,42 @@ pre tt:after {
   align-content: flex-end;
 }
 
-.menu__item {
-  margin: 0 6px 0 6px;
-  padding: 10px 8px 10px 8px;
+.menu__list {
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+  height: 28px;
+  text-align: center;
+}
+
+.menu__list--item {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__list--item-seperator {
+  background-color: #ccc;
+  display: block;
+  position: absolute;
+  height: 28px;
+  width: 1px;
+  top: 50%;
+  margin-top: -14px;
+}
+
+.menu__list--item-link {
   color: #332222;
   text-decoration: none;
   text-transform: uppercase;
   font-family: Roboto, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell;
-
   font-size: 0.9rem;
+  position: relative;
+  margin: 0 6px 0 6px;
+  padding: 10px 8px 10px 8px;
 }
-
-.menu__item:hover {
+.menu__list--item-link:hover {
   color: red;
-  border-bottom: 1px solid red;
 }
 
 /* post layout */
@@ -890,7 +912,7 @@ pre tt:after {
 
 .site-mast {
   background: white;
-  height: 120px;
+  height: 81px;
   position: fixed;
   left: 0;
   top: 0;
@@ -900,14 +922,17 @@ pre tt:after {
 }
 
 .header {
-  padding: 30px 80px 30px 80px;
+  padding: 14px 80px 10px 80px;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   display: flex;
   flex-grow: 0;
   flex-shrink: 1;
   flex-direction: row;
   max-width: 1280px;
   margin: 0 auto;
+}
+
+.header__title {
+  font-family: oswald, Helvetica, sans-serif;
 }

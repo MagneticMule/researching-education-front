@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Researching Education.`,
+    title: `Researching Education`,
     subTitle: 'Discussing practice and research in learning',
     description: ``,
     author: `@TomDSweeney`,
@@ -38,7 +38,7 @@ module.exports = {
           '**/*/*/tags',
           '**/*/*/taxonomies',
           '**/*/*/users',
-          '**/*/*/menus'
+          '**/*/*/menus',
         ],
       },
     },

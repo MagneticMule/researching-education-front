@@ -5,18 +5,31 @@ class MainMenu extends Component {
   render() {
     return (
       <nav class="menu">
-        <Link to="/articles" className="menu__item">
-          Articles
-        </Link>
-        <Link to="/subscribe" className="menu__item">
-          Subscribe
-        </Link>
-        <Link to="/privacy" className="menu__item">
-          Privacy
-        </Link>
-        <Link to="/about" className="menu__item">
-          About
-        </Link>
+        <ul class="menu__list">
+          <li class="menu__list--item">
+            <Link to="/articles" className="menu__list--item-link">
+              Articles
+            </Link>
+          </li>
+          <li class="menu__list--item">
+            <Link to="/subscribe" className="menu__list--item-link">
+              Subscribe
+            </Link>
+            <div class="menu__list--item-seperator" />
+          </li>
+          <li class="menu__list--item">
+            <Link to="/privacy" className="menu__list--item-link">
+              Privacy
+            </Link>
+            <div class="menu__list--item-seperator" />
+          </li>
+          <li class="menu__list--item">
+            <Link to="/about" className="menu__list--item-link">
+              About
+            </Link>
+            <div class="menu__list--item-seperator" />
+          </li>
+        </ul>
       </nav>
     );
   }
