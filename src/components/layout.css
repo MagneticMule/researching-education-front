@@ -835,6 +835,9 @@ pre tt:after {
   font-weight: 900;
 }
 
+.post__featured--image {
+  grid-area: feature-image;
+}
 .post__content > h2 {
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
@@ -992,4 +995,20 @@ pre tt:after {
 
 .header__title {
   font-family: oswald, Helvetica, sans-serif;
+}
+
+figure.wp-block-image > img {
+  margin: 0;
+}
+figure.wp-block-image > figcaption {
+  padding: 0;
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+figure.wp-block-image > figcaption:before {
+  font-weight: 200;
+  content: 'Credit: ';
 }

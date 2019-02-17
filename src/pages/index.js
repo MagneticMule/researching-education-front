@@ -7,7 +7,10 @@ import SEO from '../components/seo';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Welcome"
+      keywords={[`research`, `teaching`, `learning`, 'teach', 'learn']}
+    />
     <h1>Hello.</h1>
     <p>
       This is the homepage for <strong>Researching Education</strong>. Lorem
@@ -32,7 +35,6 @@ const IndexPage = () => (
       dolores vitae praesentium hic, velit consequatur excepturi ea similique
       facere aperiam voluptatibus possimus expedita.
     </p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
 
     <h2>Join the conversation</h2>
     <p>
@@ -86,3 +88,14 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
+export const indexPageQuery = graphql`
+  query indexPageQuery {
+    wordpressPage(slug: { eq: "home-page" }) {
+      status
+      title
+      content
+      wordpress_id
+    }
+  }
+`;

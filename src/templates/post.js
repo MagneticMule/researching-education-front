@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import Disqus from 'disqus-react';
 import Layout from '../components/layout';
 import Share from '../components/share';
@@ -82,6 +83,11 @@ export default PostTemplate;
 export const postQuery = graphql`
   query currentPostQuery($id: String!) {
     wordpressPost(id: { eq: $id }) {
+      acf {
+        external_article
+        reference
+        link_to_article
+      }
       title
       author {
         name
