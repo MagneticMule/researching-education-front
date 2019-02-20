@@ -15,7 +15,7 @@ import {
   EmailIcon,
 } from 'react-share';
 
-import './layout.css';
+import './sass/main.scss';
 
 const Share = () => (
   <div class="post__sharing">

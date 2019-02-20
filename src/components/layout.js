@@ -5,7 +5,7 @@ import Head from './head';
 import MainMenu from './menu/mainMenu';
 import Header from './header';
 import Footer from './footer/footer';
-import './layout.css';
+import './sass/main.scss';
 
 const Layout = ({ children }) => (
   <StaticQuery

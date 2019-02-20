@@ -3,7 +3,7 @@ module.exports = {
     title: `Researching Education`,
     subTitle: 'Discussing practice and research in learning',
     description: ``,
-    author: `@TomDSweeney`,
+    author: `@MagneticMule`,
   },
   plugins: [
     {
@@ -21,6 +21,10 @@ module.exports = {
         perPage: 50,
         // Number of requests sent at once
         concurrentRequests: 10,
+        searchAndReplaceContentUrls: {
+          sourceUrl: 'https://lsri.info/researchingeducation',
+          replacementUrl: 'https://researchingeducation.com',
+        },
         // Set WP REST API routes whitelists
         // and blacklists using glob patterns.
         // Defaults to whitelist the routes shown
@@ -55,5 +59,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
+    `gatsby-plugin-sass`,
   ],
 };

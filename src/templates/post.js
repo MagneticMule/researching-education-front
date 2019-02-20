@@ -11,6 +11,14 @@ import Share from '../components/share';
 class PostTemplate extends Component {
   render() {
     const post = this.props.data.wordpressPost;
+    // boolean: Is this article republished from an external source such as "The Conversation"?
+    const isExternalArticle = post.acf.external_article;
+    // string: The full reference to the original article in APA format
+    const articleReference = post.acf.reference;
+    // string - URL: the url to the original academic paper (if any)
+    const articleReferenceLink = post.acf.link_to_article;
+
+    // disqus comment system setup
     const disqusShortname = 'researching-education';
     const disqusConfig = {
       identifier: post.title,
