@@ -48,12 +48,7 @@ class PostTemplate extends Component {
           <Share />
 
           <div class="post__author">
-            <div>
-              <img
-                class="post__author-picture"
-                src={post.author.avatar_urls.wordpress_48}
-              />
-            </div>
+
             <span class="post__content--italic">by</span>&nbsp;
             <span
               class="post__author-name"
