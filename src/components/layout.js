@@ -27,7 +27,6 @@ const Layout = ({ children }) => (
           siteSubtitle={data.site.siteMetadata.subTitle}
         />
         <div className="container">{children}</div>
-
       </div>
     )}
   />
