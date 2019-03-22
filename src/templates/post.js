@@ -37,6 +37,7 @@ class PostTemplate extends Component {
               dangerouslySetInnerHTML={{ __html: post.title }}
             />
           </div>
+          {/*
           <div class="issue">
             <div class="issue__title">
               Issue <span class="issue__number">01</span>
@@ -44,6 +45,7 @@ class PostTemplate extends Component {
             <div class="hline" />
             <div class="issue__date">February 2019</div>
           </div>
+          -*/}
 
           <Share />
 

@@ -12,7 +12,9 @@ const IndexPage = props => (
       keywords={[`research`, `teaching`, `learning`, 'teach', 'learn']}
     />
     <h1 dangerouslySetInnerHTML={{ __html: props.data.wordpressPage.title }} />
-    <p dangerouslySetInnerHTML={{ __html: props.data.wordpressPage.content }} />
+    <div
+      dangerouslySetInnerHTML={{ __html: props.data.wordpressPage.content }}
+    />
   </Layout>
 );
 

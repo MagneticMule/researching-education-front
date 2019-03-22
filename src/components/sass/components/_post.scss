@@ -1,11 +1,24 @@
 /* post layout */
 
 .post {
-  max-width: 1280px;
   display: grid;
-  grid-template-columns: 32px minmax(480px, 4fr) minmax(180px, 1fr);
-  grid-gap: 24px 128px;
-  grid-template-areas: 'header header issue' 'sharing body author' 'sharing body license';
+   @include for-desktop-up {
+      grid-template-columns: 32px 4fr 1fr;
+      grid-gap: 24px 64px;
+      grid-template-areas: 'header header header' 'sharing body author' 'sharing body license';
+   }
+
+    @include for-tablet-up {
+      grid-template-columns: 32px minmax(480px, 4fr);
+      grid-gap: 24px 64px;
+      grid-template-areas: 'header header' 'author author' 'sharing body' 'license license';
+   }
+
+    @include for-phone {
+      grid-template-columns: auto;
+      grid-template-areas: 'header' 'author' 'body' 'sharing' 'license';
+   }
+
 }
 
 .post__sharing {
