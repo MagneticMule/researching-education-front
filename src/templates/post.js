@@ -50,7 +50,6 @@ class PostTemplate extends Component {
           <Share />
 
           <div class="post__author">
-
             <span class="post__content--italic">by</span>&nbsp;
             <span
               class="post__author-name"
@@ -67,6 +66,11 @@ class PostTemplate extends Component {
           />
         </div>
         <div class="post__comments">
+          <p>
+            If you have a comment on this article, please subscribe to{' '}
+            <strong>Disqus</strong> where your comments can be relayed here. The
+            Editors reserve the right to moderate submitted comments.
+          </p>
           <Disqus.DiscussionEmbed
             shortname={disqusShortname}
             config={disqusConfig}

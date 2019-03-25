@@ -5,12 +5,11 @@ class SignupForm extends Component {
     return (
       <div class="footer__signup-form">
         <div className="footer__signup-form--intro">
-          Lorem ipsum dolor sit amet, has ea assum aperiam, vis in habemus
-          sententiae, ei illum verterem sea. Alia detracto in vis. At qui case
-          eleifend, qui ex diceret civibus, et cum velit aliquam
-          mnesarchum.Lorem ipsum dolor sit amet.
+          Researching Education sends occasional lists of articles like this to
+          email subscribers. If you wish to subscribe all we need is your email
+          address.
         </div>
-        <div className="box-shadow-small">
+        <div className="footer__signup-form--controls">
           <input
             type="email"
             name="reader_email"

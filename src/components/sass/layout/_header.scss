@@ -12,4 +12,50 @@
 
 .header__title {
   font-family: $header-title;
+  color: $color-red-medium;
+}
+
+/* menus */
+
+.menu {
+  align-content: flex-end;
+}
+
+.menu__list {
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+  height: 28px;
+  text-align: center;
+}
+
+.menu__list--item {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__list--item-seperator {
+  background-color: #ccc;
+  display: block;
+  position: absolute;
+  height: 28px;
+  width: 1px;
+  top: 50%;
+  margin-top: -14px;
+}
+
+.menu__list--item-link {
+  color: #332222;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $navigation-menu-links;
+  font-size: 0.9rem;
+  position: relative;
+  margin: 0 6px 0 6px;
+  padding: 10px 8px 10px 8px;
+}
+
+.menu__list--item-link:hover {
+  color: red;
 }

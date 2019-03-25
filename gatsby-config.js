@@ -17,6 +17,12 @@ module.exports = {
         // we are using the Advanced Custom Fields plugin
         useACF: true,
         verboseOutput: true,
+        perPage: 100,
+        // Search and Replace Urls across WordPress content.
+        searchAndReplaceContentUrls: {
+          sourceUrl: 'https://lsri.info/researchingeducation',
+          replacementUrl: 'https://researchingeducation.com',
+        },
         // how many pagrs are retreived on each API request
         perPage: 50,
         // Number of requests sent at once

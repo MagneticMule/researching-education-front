@@ -4,11 +4,10 @@ import { Helmet } from 'react-helmet';
 class Head extends Component {
   render() {
     return (
-      <div>
-        <Helmet>
-          <title>Researching Education</title>
+      <Helmet>
+        <title>Researching Education</title>
 
-          {/* <link
+        {/* <link
             rel:"apple-touch-icon"
             sizes:"57x57"
             href:"/icons/apple-icon-57x57.png"
@@ -81,8 +80,7 @@ class Head extends Component {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
           <meta name="theme-color" content="#ffffff" /> */}
-        </Helmet>
-      </div>
+      </Helmet>
     );
   }
 }

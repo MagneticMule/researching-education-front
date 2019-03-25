@@ -2,23 +2,22 @@
 
 .post {
   display: grid;
-   @include for-desktop-up {
-      grid-template-columns: 32px 4fr 1fr;
-      grid-gap: 24px 64px;
-      grid-template-areas: 'header header header' 'sharing body author' 'sharing body license';
-   }
+  @include for-desktop-up {
+    grid-template-columns: 32px 4fr 1fr;
+    grid-gap: 24px 64px;
+    grid-template-areas: 'header header header' 'sharing body author' 'sharing body license';
+  }
 
-    @include for-tablet-up {
-      grid-template-columns: 32px minmax(480px, 4fr);
-      grid-gap: 24px 64px;
-      grid-template-areas: 'header header' 'author author' 'sharing body' 'license license';
-   }
+  @include for-tablet-up {
+    grid-template-columns: 32px minmax(480px, 4fr);
+    grid-gap: 24px 64px;
+    grid-template-areas: 'header header' 'sharing author' 'sharing body' 'license license';
+  }
 
-    @include for-phone {
-      grid-template-columns: auto;
-      grid-template-areas: 'header' 'author' 'body' 'sharing' 'license';
-   }
-
+  @include for-phone {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'header' 'author' 'body' 'sharing' 'license';
+  }
 }
 
 .post__sharing {
@@ -33,13 +32,15 @@
   font-size: 0.8rem;
 }
 
-.post__sharing--button {}
+.post__sharing--button {
+}
 
 .post__sharing--button--icon {
   margin: 8px 0 8px 0;
 }
 
-.post__sharing--button--text {}
+.post__sharing--button--text {
+}
 
 .post__header {
   border: 0 0 1px 0 solid black;
@@ -89,9 +90,11 @@
   width: 30%;
 }
 
-.post__reference {}
+.post__reference {
+}
 
-.post__reference-citation {}
+.post__reference-citation {
+}
 
 .post__reference-link {
   text-decoration: none;
@@ -107,7 +110,7 @@
   line-height: 1.6rem;
 }
 
-.post__content>p:first-of-type {
+.post__content > p:first-of-type {
   color: #454545;
   font-family: Playfair Display;
   font-size: 1.6rem;
@@ -116,7 +119,7 @@
   line-height: 2rem;
 }
 
-.post__content>p:nth-of-type(2)::first-line {
+.post__content > p:nth-of-type(2)::first-line {
   font-weight: 900;
   line-height: 1.6rem;
 }
@@ -125,7 +128,9 @@
   grid-area: feature-image;
 }
 
-.post__content>h2 {
+.post__content > h2 {
+  font-family: $article-header2;
+  font-weight: 200;
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
 }
@@ -140,4 +145,10 @@
 
 .post__comments {
   min-height: 500px;
+}
+
+.post__content a {
+  color: $color-red-medium;
+  text-decoration: underline;
+  font-style: italic;
 }

@@ -1,70 +1,27 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Roboto|");
-@import "base/resets";
-@import "base/common";
-@import "base/colors";
-@import "base/elements";
-@import "base/mixins";
-@import "components/blocks";
-@import "components/buttons";
-@import "components/forms";
-@import "components/icons";
-@import "components/typography";
-@import "components/post";
-@import "layout/aside";
-@import "layout/footer";
-@import "layout/header";
-@import "layout/main";
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto|');
+@import 'base/resets';
+@import 'base/common';
+@import 'base/colors';
+@import 'base/elements';
+@import 'base/mixins';
+@import 'components/blocks';
+@import 'components/buttons';
+@import 'components/comments';
+@import 'components/forms';
+@import 'components/icons';
+@import 'components/typography';
+@import 'components/post';
+@import 'layout/aside';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/main';
+
 html {
   font-family: $body-font;
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   text-rendering: optimizeLegibility;
   font-size: 18px;
   line-height: 1.6;
-}
-
-/* menus */
-
-.menu {
-  align-content: flex-end;
-}
-
-.menu__list {
-  vertical-align: middle;
-  padding: 0;
-  margin: 0;
-  height: 28px;
-  text-align: center;
-}
-
-.menu__list--item {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-
-.menu__list--item-seperator {
-  background-color: #ccc;
-  display: block;
-  position: absolute;
-  height: 28px;
-  width: 1px;
-  top: 50%;
-  margin-top: -14px;
-}
-
-.menu__list--item-link {
-  color: #332222;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: $navigation-menu-links;
-  font-size: 0.9rem;
-  position: relative;
-  margin: 0 6px 0 6px;
-  padding: 10px 8px 10px 8px;
-}
-
-.menu__list--item-link:hover {
-  color: red;
 }
 
 .issue {
@@ -121,15 +78,6 @@ html {
   width: 100%;
 }
 
-.has-drop-cap::first-letter {
-  font-weight: 900;
-  padding: 0 24px 0 0;
-  font-size: 128px;
-  float: left;
-  text-align: center;
-  margin-top: 0.09em;
-}
-
 .site-mast {
   background: white;
   height: 81px;
@@ -155,5 +103,5 @@ figure.wp-block-image > figcaption {
 
 figure.wp-block-image > figcaption:before {
   font-weight: 200;
-  content: "Credit: ";
+  content: 'Credit: ';
 }

@@ -1,3 +1,23 @@
-$body-font: Roboto, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue";
+$body-font: 'Open Sans', BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu,
+  Cantarell, Roboto 'Helvetica Neue';
 $header-title: oswald, Helvetica, sans-serif;
-$navigation-menu-links: Roboto, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell;
+$article-header2: 'Open Sans', BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu,
+  Cantarell, Roboto 'Helvetica Neue';
+$navigation-menu-links: Roboto, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu,
+  Cantarell;
+
+.fs-italic {
+  font-style: italic;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
