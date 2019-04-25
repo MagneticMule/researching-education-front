@@ -72,6 +72,7 @@
 }
 
 .post__author-bio {
+  font-family: $navigation-menu-links;
   margin: 10px 0;
   font-size: 0.7rem;
   line-height: 1.1rem;
@@ -81,9 +82,25 @@
   vertical-align: middle;
   filter: grayscale(1);
   margin: 0 0 1rem 0;
-  border-radius: 2%;
+  border-radius: 50%;
   width: 75%;
   border: 1px solid darkgray;
+}
+
+.post__author-contact {
+  margin-top: 16px;
+  font-family: $navigation-menu-links;
+  font-size: 0.666rem;
+}
+
+.post__author-contact--email {
+}
+
+.post__author-contact--website {
+}
+
+.post__author-contact--institution {
+  font-weight: 900;
 }
 
 .post__original-article {

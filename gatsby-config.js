@@ -24,7 +24,7 @@ module.exports = {
           replacementUrl: 'https://researchingeducation.com',
         },
         // how many pagrs are retreived on each API request
-        perPage: 50,
+        perPage: 100,
         // Number of requests sent at once
         concurrentRequests: 10,
         searchAndReplaceContentUrls: {
@@ -49,7 +49,6 @@ module.exports = {
           '**/*/*/taxonomies',
           '**/*/*/users',
           '**/*/*/menus',
-          'acf/*/*/',
         ],
       },
     },

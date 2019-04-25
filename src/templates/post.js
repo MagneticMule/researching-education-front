@@ -50,15 +50,40 @@ class PostTemplate extends Component {
           <Share />
 
           <div class="post__author">
+            {/*
+            <img
+              src={post.acf.author_portrait.source_url}
+              class="post__author-picture"
+            />
+          */}
             <span class="post__content--italic">by</span>&nbsp;
             <span
               class="post__author-name"
-              dangerouslySetInnerHTML={{ __html: post.author.name }}
+              dangerouslySetInnerHTML={{ __html: post.acf.author_name }}
             />
             <div
               class="post__author-bio"
-              dangerouslySetInnerHTML={{ __html: post.author.description }}
+              dangerouslySetInnerHTML={{ __html: post.acf.author_biography }}
             />
+            <div class="post__author-contact">
+              <div
+                class="post__author-contact--institution "
+                dangerouslySetInnerHTML={{
+                  __html: post.acf.author_institution_or_business,
+                }}
+              />
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: post.acf.author_email_address,
+                }}
+              />
+
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: post.acf.author_website,
+                }}
+              />
+            </div>
           </div>
           <div
             class="post__content"
