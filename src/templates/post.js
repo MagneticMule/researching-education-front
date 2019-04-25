@@ -92,17 +92,19 @@ export default PostTemplate;
 export const postQuery = graphql`
   query currentPostQuery($id: String!) {
     wordpressPost(id: { eq: $id }) {
-      acf {
-        external_article
-        reference
-        link_to_article
-      }
       title
-      author {
-        name
-        description
-        avatar_urls {
-          wordpress_48
+      acf {
+        author_name
+        author_email_address
+        author_institution_or_business
+        author_website
+        author_twitter_username
+        author_biography
+        author_portrait {
+          source_url
+          type
+          alt_text
+          caption
         }
       }
       content

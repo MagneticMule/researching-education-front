@@ -49,6 +49,7 @@ module.exports = {
           '**/*/*/taxonomies',
           '**/*/*/users',
           '**/*/*/menus',
+          'acf/*/*/',
         ],
       },
     },

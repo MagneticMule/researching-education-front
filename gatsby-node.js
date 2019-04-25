@@ -4,10 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const _ = require(`lodash`)
-const Promise = require(`bluebird`)
-const path = require(`path`)
-const slash = require(`slash`)
+const _ = require(`lodash`);
+const Promise = require(`bluebird`);
+const path = require(`path`);
+const slash = require(`slash`);
 
 // Implement the Gatsby API “createPages”. This is
 // called after the Gatsby bootstrap is finished so you have
@@ -16,7 +16,7 @@ const slash = require(`slash`)
 // Will create pages for Wordpress pages (route : /{slug})
 // Will create pages for Wordpress posts (route : /post/{slug})
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
   return new Promise((resolve, reject) => {
     // The “graphql” function allows us to run arbitrary
     // queries against the local Wordpress graphql schema. Think of
@@ -42,12 +42,12 @@ exports.createPages = ({ graphql, actions }) => {
     )
       .then(result => {
         if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
+          console.log(result.errors);
+          reject(result.errors);
         }
 
         // Create Page pages.
-        const pageTemplate = path.resolve(`./src/templates/page.js`)
+        const pageTemplate = path.resolve(`./src/templates/page.js`);
         // We want to create a detailed page for each
         // page node. We'll just use the Wordpress Slug for the slug.
         // The Page ID is prefixed with 'PAGE_'
@@ -65,8 +65,8 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               id: edge.node.id,
             },
-          })
-        })
+          });
+        });
       })
       // ==== END PAGES ====
 
@@ -78,9 +78,6 @@ exports.createPages = ({ graphql, actions }) => {
               allWordpressPost {
                 edges {
                   node {
-                    acf {
-                      external_article
-                    }
                     id
                     slug
                     title
@@ -90,15 +87,22 @@ exports.createPages = ({ graphql, actions }) => {
                       id
                       name
                     }
-                    status
-                    date(formatString: "DD, MMM, YYYY")
-                    author {
-                      name
-                      description
-                      avatar_urls {
-                        wordpress_48
+                    acf {
+                      author_name
+                      author_email_address
+                      author_institution_or_business
+                      author_website
+                      author_twitter_username
+                      author_biography
+                      author_portrait {
+                        source_url
+                        type
+                        alt_text
+                        caption
                       }
                     }
+                    status
+                    date(formatString: "DD, MMM, YYYY")
                   }
                 }
               }
@@ -106,10 +110,10 @@ exports.createPages = ({ graphql, actions }) => {
           `
         ).then(result => {
           if (result.errors) {
-            console.log(result.errors)
-            reject(result.errors)
+            console.log(result.errors);
+            reject(result.errors);
           }
-          const postTemplate = path.resolve(`./src/templates/post.js`)
+          const postTemplate = path.resolve(`./src/templates/post.js`);
           // We want to create a detailed page for each
           // post node. We'll just use the Wordpress Slug for the slug.
           // The Post ID is prefixed with 'POST_'
@@ -120,11 +124,11 @@ exports.createPages = ({ graphql, actions }) => {
               context: {
                 id: edge.node.id,
               },
-            })
-          })
-          resolve()
-        })
-      })
+            });
+          });
+          resolve();
+        });
+      });
     // ==== END POSTS ====
-  })
-}
+  });
+};
