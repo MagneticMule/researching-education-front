@@ -97,8 +97,12 @@ exports.createPages = ({ graphql, actions }) => {
                       author_portrait {
                         localFile {
                           childImageSharp {
-                            fixed(width: 250) {
-                              ...GatsbyImageSharpFixed
+                            fixed(width: 150, height: 150) {
+                              base64
+                              width
+                              height
+                              src
+                              srcSet
                             }
                             id
                           }
