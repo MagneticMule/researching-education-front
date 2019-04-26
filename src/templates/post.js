@@ -55,6 +55,7 @@ class PostTemplate extends Component {
               objectFit="cover"
               className="post__author-picture"
             />
+            <br />
             <span class="post__author--italic-underline">by</span>&nbsp;
             <span
               class="post__author-name"

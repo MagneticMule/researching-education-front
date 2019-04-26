@@ -89,8 +89,7 @@
 }
 
 .post__author-picture {
-  vertical-align: middle;
-  align-self: center;
+  border-radius: 50%;
   filter: grayscale(1.5);
   margin: 0 0 1rem 0;
   border: 2px solid rgba(10, 10, 10, 0.2);
