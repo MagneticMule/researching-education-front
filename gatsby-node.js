@@ -95,8 +95,14 @@ exports.createPages = ({ graphql, actions }) => {
                       author_twitter_username
                       author_biography
                       author_portrait {
-                        source_url
-                        type
+                        localFile {
+                          childImageSharp {
+                            fixed(width: 250) {
+                              ...GatsbyImageSharpFixed
+                            }
+                            id
+                          }
+                        }
                         alt_text
                         caption
                       }

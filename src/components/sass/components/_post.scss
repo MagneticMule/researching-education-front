@@ -62,7 +62,17 @@
 }
 
 .post__author {
+  font-family: $interface-elements;
   grid-area: author;
+}
+
+.post__author--italic-underline {
+  display: inline-block;
+  font-size: 0.9rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid grey;
+  font-weight: 100;
+  font-style: italic;
 }
 
 .post__author-name {
@@ -80,11 +90,10 @@
 
 .post__author-picture {
   vertical-align: middle;
-  filter: grayscale(1);
+  align-self: center;
+  filter: grayscale(1.5);
   margin: 0 0 1rem 0;
-  border-radius: 50%;
-  width: 75%;
-  border: 1px solid darkgray;
+  border: 2px solid rgba(10, 10, 10, 0.2);
 }
 
 .post__author-contact {
@@ -150,14 +159,6 @@
   font-weight: 800;
   margin: 0 0 0.5rem 0;
   font-size: 1.333rem;
-}
-
-.post__content--italic {
-  font-size: 0.9rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid grey;
-  font-weight: 100;
-  font-style: italic;
 }
 
 .post__comments {

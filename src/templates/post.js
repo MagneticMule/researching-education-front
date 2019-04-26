@@ -50,13 +50,12 @@ class PostTemplate extends Component {
           <Share />
 
           <div class="post__author">
-            {/*
-            <img
-              src={post.acf.author_portrait.source_url}
-              class="post__author-picture"
+            <Img
+              fixed={post.acf.author_portrait.localFile.childImageSharp.fixed}
+              objectFit="cover"
+              className="post__author-picture"
             />
-          */}
-            <span class="post__content--italic">by</span>&nbsp;
+            <span class="post__author--italic-underline">by</span>&nbsp;
             <span
               class="post__author-name"
               dangerouslySetInnerHTML={{ __html: post.acf.author_name }}
@@ -126,8 +125,14 @@ export const postQuery = graphql`
         author_twitter_username
         author_biography
         author_portrait {
-          source_url
-          type
+          localFile {
+            childImageSharp {
+              fixed(width: 150, height: 150) {
+                ...GatsbyImageSharpFixed
+              }
+              id
+            }
+          }
           alt_text
           caption
         }
