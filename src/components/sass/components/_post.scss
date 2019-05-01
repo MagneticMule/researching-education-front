@@ -3,20 +3,20 @@
 .post {
   display: grid;
   @include for-desktop-up {
-    grid-template-columns: 32px 4fr 1fr;
-    grid-gap: 24px 64px;
-    grid-template-areas: 'header header header' 'sharing body author' 'sharing body license';
+    grid-template-columns: 32px 6fr 1fr;
+    grid-gap: 32px 64px;
+    grid-template-areas: 'header header header' 'sharing featured-image author' 'sharing body license';
   }
 
   @include for-tablet-up {
     grid-template-columns: 32px minmax(480px, 4fr);
     grid-gap: 24px 64px;
-    grid-template-areas: 'header header' 'sharing author' 'sharing body' 'license license';
+    grid-template-areas: 'header header' 'featured-image' 'sharing author' 'sharing body' 'license license';
   }
 
   @include for-phone {
     grid-template-columns: 1fr;
-    grid-template-areas: 'header' 'author' 'body' 'sharing' 'license';
+    grid-template-areas: 'header' 'author' 'featured-image' 'body' 'sharing' 'license';
   }
 }
 
@@ -133,6 +133,7 @@
   font-weight: normal;
   font-style: normal;
   line-height: 1.6rem;
+  grid-area: body;
 }
 
 .post__content > p:first-of-type {
@@ -149,8 +150,9 @@
   line-height: 1.6rem;
 }
 
-.post__featured--image {
-  grid-area: feature-image;
+.post__featured-image {
+  width: 100%;
+  grid-area: featured-image;
 }
 
 .post__content > h2 {
@@ -167,5 +169,8 @@
 .post__content a {
   color: $color-red-medium;
   text-decoration: underline;
-  font-style: italic;
+}
+
+.post__content a:hover {
+  color: $color-red-light;
 }
