@@ -3,20 +3,21 @@
 .post {
   display: grid;
   @include for-desktop-up {
-    grid-template-columns: 32px 6fr 1fr;
+    grid-template-columns: 32px 4fr 1fr;
     grid-gap: 32px 64px;
-    grid-template-areas: 'header header header' 'sharing featured-image author' 'sharing body license';
+    grid-template-areas: 'header header header' 'sharing body author' 'sharing body license';
   }
 
   @include for-tablet-up {
     grid-template-columns: 32px minmax(480px, 4fr);
     grid-gap: 24px 64px;
-    grid-template-areas: 'header header' 'featured-image' 'sharing author' 'sharing body' 'license license';
+    grid-template-areas: 'header header' 'body body' 'sharing author' 'license license';
   }
 
   @include for-phone {
+    grid-gap: 32px;
     grid-template-columns: 1fr;
-    grid-template-areas: 'header' 'author' 'featured-image' 'body' 'sharing' 'license';
+    grid-template-areas: 'header' 'author' 'featured-body' 'body' 'sharing' 'license';
   }
 }
 

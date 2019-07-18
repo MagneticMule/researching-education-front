@@ -15,8 +15,8 @@ class PostTemplate extends Component {
     const isExternalArticle = post.acf.external_article;
 
     // featured image: the image that appears at the beggining of the article
-    const featuredImage =
-      post.acf.post_cover_image_file.localFile.childImageSharp.fluid;
+    // const featuredImage =
+    //   post.acf.post_cover_image_file.localFile.childImageSharp.fluid;
 
     // string: The full reference to the original article in APA format
     const articleReference = post.acf.reference;
@@ -52,7 +52,7 @@ class PostTemplate extends Component {
             />
           </div>
 
-            <Img fluid={featuredImage} objectPosition="50% 50%" fadeIn="1" className="post__featured-image"/>
+          {/*<Img fluid={featuredImage} objectPosition="50% 50%" fadeIn="1" className="post__featured-image"/>*/}
 
           {/*
           <div class="issue">
