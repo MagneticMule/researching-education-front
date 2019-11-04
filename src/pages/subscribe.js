@@ -12,12 +12,21 @@ const SubscribePage = props => (
   <Layout>
     <SEO
       title="Subscribe to get the latest issue of Researching Education"
-      keywords={[`research`, `teaching`, `learning`, 'teach', 'learn']}
+      keywords={[
+        `research`,
+        `teaching`,
+        `learning`,
+        'teach',
+        'learn',
+        'magazine',
+      ]}
     />
     <h1 dangerouslySetInnerHTML={{ __html: props.data.wordpressPage.title }} />
     <div
       dangerouslySetInnerHTML={{ __html: props.data.wordpressPage.content }}
     />
+
+    <h1>BAWS!</h1>
     <form
       name="subscribe"
       method="post"
