@@ -38,7 +38,9 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "start:lambda": "netlify-lambda serve functions",
+    "netlify": "netlify dev"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
@@ -52,6 +54,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.3.0",
+    "netlify-lambda": "^1.6.3",
     "prettier": "^1.16.4"
   },
   "repository": {

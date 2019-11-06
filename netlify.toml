@@ -1,2 +1,4 @@
 [build]
-  functions = "functions"
+  command = "yarn build"
+  functions = "functions-local-test" #  netlify-lambda reads this
+  publish = "functions"
