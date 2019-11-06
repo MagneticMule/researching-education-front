@@ -26,7 +26,6 @@ const SubscribePage = props => (
       dangerouslySetInnerHTML={{ __html: props.data.wordpressPage.content }}
     />
 
-    <h1>BAWS!</h1>
     <form
       name="subscribe"
       method="post"
