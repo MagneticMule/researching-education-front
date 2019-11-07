@@ -8,6 +8,7 @@
     "core-js": "^3.3.6",
     "corejs": "^1.0.0",
     "disqus-react": "^1.0.7",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.17.7",
     "gatsby-image": "^2.2.30",
     "gatsby-plugin-manifest": "^2.2.26",
@@ -36,11 +37,11 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "develop:lambda": "netlify-lambda serve functions",
     "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "start:lambda": "netlify-lambda serve functions",
-    "netlify": "netlify dev"
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
@@ -59,9 +60,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/MagneticMule/researching-education-front"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/MagneticMule/researching-education-front/issues"
   }
 }

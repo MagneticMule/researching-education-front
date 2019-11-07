@@ -1,3 +1,8 @@
 [build]
+  functions = "functions" #  netlify-lambda reads this
+  publish = "build"
 
-  functions = "functions-local-test" #  netlify-lambda reads this
+
+  [context.production]
+    [context.production.environment]
+      GATSBY_CUSTOM_CONTEXT = "production"
