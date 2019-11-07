@@ -1,7 +1,5 @@
 [build]
   functions = "functions" #  netlify-lambda reads this
-  publish = "build"
-
 
   [context.production]
     [context.production.environment]
