@@ -1,4 +1,5 @@
-const Mailgun = require('mailgun-js');
+// const Mailgun = require('mailgun-js');
+const fetch = require('node-fetch');
 
 const sendThankYouEmail = async () =>
   new Promise((resolve, reject) => {
@@ -9,11 +10,8 @@ const sendThankYouEmail = async () =>
     const domain = process.env.MAILGUN_DOMAIN;
     const host = process.env.MAILGUN_HOST;
 
-    const mailgun = Mailgun({
-      apiKey,
-      domain,
-      host,
-    });
+    const headers = { "api":"key-aeccc08aef9515134aa69fb50ec96d4d","":""};
+
 
     const mailData = {
       from: 'Researching Education <admin@mail.researchingeducation.com>',
@@ -22,11 +20,12 @@ const sendThankYouEmail = async () =>
       text: 'Do not respond to this email directly.',
     };
 
-    mailgun.messages().send(mailData, err => {
-      if (err) return reject(err);
-      resolve();
-    });
-  });
+    fetch('https://api.eu.mailgun.net/mail.researchingeducation'){
+      .then(response=>response.json()
+      then(data=>{
+
+      })
+    }
 
 exports.handler = async event => {
   try {
