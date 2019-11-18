@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "base-64": "^0.1.0",
     "core-js": "^3.3.6",
     "corejs": "^1.0.0",
     "disqus-react": "^1.0.7",
@@ -27,6 +28,7 @@
     "react-disqus": "^1.0.2",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
+    "react-hook-form": "^3.28.1",
     "react-share": "^3.0.1",
     "sharp": "^0.23.2",
     "typescript": "^3.6.4"
