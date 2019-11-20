@@ -5,7 +5,7 @@ import MainMenu from './menu/mainMenu';
 
 const Header = ({ siteTitle, siteSubtitle }) => (
   <div className="site-mast">
-    <div class="header">
+    <div className="header">
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
