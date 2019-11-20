@@ -12,13 +12,12 @@ export default function SubscribeForm() {
   const onSubmit = values => {
     console.log(values.email_address);
     const formData = new FormData();
-    fetch('.netlify/functions/mailchimp-test',{
+    fetch('/.netlify/functions/mailchimp-test',{
       method: 'POST',
       body: formData,
     })
     .then(response=>response)
       .then(data =>({
-        statusCode: 200,
         body:data,
       }).then(console.log(data))
       .catch(error=>{

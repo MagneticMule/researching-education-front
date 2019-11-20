@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
   }
 
   const params = qs.parse(event.body);
-  console.log(params.email_address);
+
   return fetch(API_ENDPOINT, {
     headers: {
       Authorization: `Basic ${base64.encode(`${MC_USERNAME}:${MC_API_KEY}`)}`,
