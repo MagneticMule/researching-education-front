@@ -1,5 +1,6 @@
 [build]
-  functions = "functions" #  netlify-lambda reads this
+  base = "."
+  functions = "./functions" #  netlify-lambda reads this
 
   [context.production]
     [context.production.environment]

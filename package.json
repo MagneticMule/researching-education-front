@@ -1,16 +1,16 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "researching-education-front",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "The Gatsby based front-end for reseachingeducation.com",
+  "version": "0.1.1",
+  "author": "Thomas Sweeney <skywriter@gmail.com>",
   "dependencies": {
     "base-64": "^0.1.0",
     "core-js": "^3.4.1",
     "corejs": "^1.0.0",
     "disqus-react": "^1.0.7",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.18.0",
+    "gatsby": "^2.18.1",
     "gatsby-image": "^2.2.33",
     "gatsby-plugin-manifest": "^2.2.29",
     "gatsby-plugin-offline": "^3.0.22",
@@ -20,21 +20,21 @@
     "gatsby-source-filesystem": "^2.1.38",
     "gatsby-source-wordpress": "^3.1.49",
     "gatsby-transformer-sharp": "^2.3.5",
-    "mailgun-js": "^0.22.0",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-disqus": "^1.0.2",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "react-hook-form": "^3.28.1",
+    "react-hook-form": "^3.28.2",
     "react-share": "^3.0.1",
     "sharp": "^0.23.3",
     "typescript": "^3.7.2"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "education",
+    "research"
   ],
   "license": "MIT",
   "scripts": {
@@ -47,17 +47,9 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
+    "airbnb": "0.0.2",
     "eslint": "^6.6.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.7.0",
-    "eslint-config-wesbos": "0.0.19",
-    "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.3.0",
+    "eslint-config-react-app": "^5.0.2",
     "netlify-lambda": "^1.6.3",
     "prettier": "^1.19.1"
   },

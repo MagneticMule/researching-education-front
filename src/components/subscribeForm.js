@@ -1,28 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import useForm from 'react-hook-form';
+import { idText } from 'typescript';
 
-const handleChange = () => {
-
-};
+const handleChange = () => {};
 
 export default function SubscribeForm() {
+
+  const [message, changeMessage] = useState('');
   const { handleSubmit, register, errors } = useForm();
-  const onSubmit = values => {
-    console.log(values.email_address);
-    const formData = new FormData();
-    fetch('/.netlify/functions/mailchimp-test',{
+
+  const onSubmit = (data, e) => {
+    fetch('.netlify/functions/mailchimp-interface', {
+      headers: {
+        // Accept: 'application/json',
+        // Content-Type': 'application/x-www-form-urlencoded',
+      },
       method: 'POST',
-      body: formData,
+      body: new URLSearchParams(data),
     })
-    .then(response=>response)
-      .then(data =>({
-        body:data,
-      }).then(console.log(data))
-      .catch(error=>{
-      console.error(error);
-    }))
+      .then(res => res.json())
+      .then(resJson => {
+        console.log(resJson);
+      })
+      .catch(error => {
+        console.warn(error);
+      })
   };
 
   return (
@@ -44,6 +48,7 @@ export default function SubscribeForm() {
         <label>Your Email:</label>
         <input
           name="email_address"
+          id="email_address"
           placeholder="you@your-email.com"
           ref={register({
             required: 'We need an email address',
@@ -53,13 +58,16 @@ export default function SubscribeForm() {
             },
           })}
         />
-        {errors.email_address && errors.email_address.message}
       </p>
+      <h4>
+        {errors.email_address && errors.email_address.message}
+      </h4>
       <p>
         <label>
           By signing up I agree that I have read our terms and conditions.
         </label>
       </p>
+      <h4>{message}</h4>
       <button type="submit" value="Submit">sign me up</button>
     </form>
   );

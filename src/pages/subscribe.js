@@ -6,8 +6,8 @@ import Image from '../components/image';
 import SubscribeForm from '../components/subscribeForm';
 import SEO from '../components/seo';
 
-const handleSubmit = e => {};
-const handleChange = e => {};
+const handleSubmit = e => { };
+const handleChange = e => { };
 
 const SubscribePage = props => (
   <Layout>

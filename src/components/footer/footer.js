@@ -9,14 +9,14 @@ class Footer extends Component {
       <div className="footer">
         <div className="footer__container">
           <div className="footer__grid">
-            <div class="footer__section">
+            <div className="footer__section">
               <div className="footer__header">Sign up</div>
               <SignupForm />
             </div>
             <div className="footer__section">
               <div className="footer__header">About Researching Education</div>
               <div className="footer__paragraph">
-                <span class="fs-italic">Researching Education</span> attempts to
+                <span className="fs-italic">Researching Education</span> attempts to
                 present clear, accessable summaries of recent research projects
                 in and around educational practice. Subscription is open to all
                 but will most likely to appeal to practicing teachers.
@@ -24,11 +24,11 @@ class Footer extends Component {
                 link to the authors’ article summaries.
               </div>
             </div>
-            <div class="footer__section">
+            <div className="footer__section">
               <div className="footer_site-links">
                 <div className="footer__header">Links</div>
                 <nav className="footer__nav">
-                  <ul class="footer__nav-list">
+                  <ul className="footer__nav-list">
                     <li>Articles</li>
                     <li>Privacy</li>
                     <li>Contribute</li>
