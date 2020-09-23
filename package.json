@@ -6,7 +6,7 @@
   "author": "Thomas Sweeney <skywriter@gmail.com>",
   "dependencies": {
     "base-64": "^0.1.0",
-    "core-js": "^3.4.1",
+    "core-js": "^3.6.5",
     "corejs": "^1.0.0",
     "disqus-react": "^1.0.7",
     "dotenv": "^8.2.0",
