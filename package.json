@@ -29,7 +29,7 @@
     "react-helmet": "^5.2.1",
     "react-hook-form": "^3.28.2",
     "react-share": "^3.0.1",
-    "sharp": "^0.23.3",
+    "sharp": "^0.30.5",
     "typescript": "^3.7.2"
   },
   "keywords": [
